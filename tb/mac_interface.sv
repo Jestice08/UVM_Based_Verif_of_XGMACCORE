@@ -15,6 +15,106 @@ logic [7:0]   wb_adr_i;
 logic [63:0]  xgmii_rxd, xgmii_txd;
 logic [7:0]   xgmii_rxc, xgmii_txc;
 
+parameter INPUT_SKEW  = 1;//input is sampled before the clocking event occurs
+parameter OUTPUT_SKEW = 1;//output is synchronized and sent after the clocking event
+
+clocking drv_cb @(posedge clk_156m25);
+    default input   #INPUT_SKEW;
+    default output  #OUTPUT_SKEW;
+    input   pkt_rx_avail;
+    input   pkt_rx_data;
+    input   pkt_rx_eop;
+    input   pkt_rx_err;
+    input   pkt_rx_mod;
+    input   pkt_rx_sop;
+    input   pkt_rx_val;
+    input   pkt_tx_full;
+    input   wb_ack_o;
+    input   wb_dat_o;
+    input   wb_int_o;
+    input   xgmii_txc;
+    input   xgmii_txd;
+    output  pkt_rx_ren;
+    output  pkt_tx_data;
+    output  pkt_tx_eop;
+    output  pkt_tx_mod;
+    output  pkt_tx_sop;
+    output  pkt_tx_val;
+    output  wb_adr_i;
+    output  wb_cyc_i;
+    output  wb_dat_i;
+    output  wb_stb_i;
+    output  wb_we_i;
+    output  xgmii_rxc;
+    output  xgmii_rxd;
+endclocking // drv_cb
+modport driver_port( clocking drv_cb );
+
+clocking mon_cb @(posedge clk_156m25);
+    default input   #INPUT_SKEW;
+    default output  #OUTPUT_SKEW;
+    input   pkt_rx_avail;
+    input   pkt_rx_data;
+    input   pkt_rx_eop;
+    input   pkt_rx_err;
+    input   pkt_rx_mod;
+    input   pkt_rx_sop;
+    input   pkt_rx_val;
+    input   pkt_tx_full;
+    input   wb_ack_o;
+    input   wb_dat_o;
+    input   wb_int_o;
+    input   xgmii_txc;
+    input   xgmii_txd;
+    output  pkt_rx_ren;            //to trigger rx dequeue module, based on some data from dut
+    input   pkt_tx_data;
+    input   pkt_tx_eop;
+    input   pkt_tx_mod;
+    input   pkt_tx_sop;
+    input   pkt_tx_val;
+    input   wb_adr_i;
+    input   wb_cyc_i;
+    input   wb_dat_i;
+    input   wb_stb_i;
+    input   wb_we_i;
+    input   xgmii_rxc;
+    input   xgmii_rxd;
+endclocking //mon_cb
+modport monitor_port( clocking mon_cb );
+
+modport dut_port  (
+                        output  pkt_rx_avail,
+                        output  pkt_rx_data,
+                        output  pkt_rx_eop,
+                        output  pkt_rx_err,
+                        output  pkt_rx_mod,
+                        output  pkt_rx_sop,
+                        output  pkt_rx_val,
+                        output  pkt_tx_full,
+                        output  wb_ack_o,
+                        output  wb_dat_o,
+                        output  wb_int_o,
+                        output  xgmii_txc,
+                        output  xgmii_txd,
+                        input   pkt_rx_ren,
+                        input   pkt_tx_data,
+                        input   pkt_tx_eop,
+                        input   pkt_tx_mod,
+                        input   pkt_tx_sop,
+                        input   pkt_tx_val,
+                        input   wb_adr_i,
+                        input   wb_cyc_i,
+                        input   wb_dat_i,
+                        input   wb_stb_i,
+                        input   wb_we_i,
+                        input   xgmii_rxc,
+                        input   xgmii_rxd
+                    );
+
+initial begin
+    assign  xgmii_rxc = xgmii_txc;
+    assign  xgmii_rxd = xgmii_txd;
+end
 
 endinterface: mac_interface
 `endif
