@@ -5,7 +5,7 @@ class wb_sequence_config extends uvm_sequence #(wb_transaction_in);
 
 	`uvm_object_utils(wb_sequence_config)
 
-	function new(input string name="wishbone_init_sequence");
+	function new(input string name="wb_sequence_config");
 		super.new(name);
     	`uvm_info( get_name(), $sformatf("Hierarchy: %m"), UVM_HIGH )
   	endfunction : new
@@ -47,7 +47,7 @@ class wb_sequence_finish extends uvm_sequence #(wb_transaction_in);
 
 	`uvm_object_utils(wb_sequence_finish)
 
-	function new(input string name="wishbone_init_sequence");
+	function new(input string name="wb_sequence_finish");
 		super.new(name);
     	`uvm_info( get_name(), $sformatf("Hierarchy: %m"), UVM_HIGH )
   	endfunction : new

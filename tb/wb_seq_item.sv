@@ -23,7 +23,7 @@ class wb_transaction_in extends uvm_sequence_item;
 	    wb_addr == `CPUREG_INT_MASK;     	// Interrupt Mask Register    : Address 0x010
 	}
 
-    function new(input string name = "wb_seq_item");
+    function new(input string name = "wb_transaction_in");
         super.new(name);
     endfunction: new
 
