@@ -5,7 +5,7 @@ class wb_driver extends uvm_driver #(wb_transaction_in);
 
 	`uvm_component_utils(wb_driver)
 
-	virtual mac_interface wb_vi_if;
+	virtual mac_interface wb_drv_vi_if;
 
   	function new(input string name="wb_driver", input uvm_component parent);
     	super.new(name, parent);
@@ -14,8 +14,8 @@ class wb_driver extends uvm_driver #(wb_transaction_in);
   	//configure the virtual interface
   	virtual function void build_phase(input uvm_phase phase);
     	super.build_phase(phase);
-   		uvm_config_db#(virtual mac_interface)::get(this, "", "wb_vi_if", wb_vi_if);
-    	if ( wb_vi_if==null )
+   		uvm_config_db#(virtual mac_interface)::get(this, "", "wb_drv_vi_if", wb_drv_vi_if);
+    	if ( wb_drv_vi_if==null )
       		`uvm_fatal(get_name(), "No virtual interface for wishbone driver.");
   	endfunction : build_phase
 
@@ -28,24 +28,24 @@ class wb_driver extends uvm_driver #(wb_transaction_in);
   			if(req == null) //no available seq item
   			begin
 	  			//not trigger transmission
-  				wb_vi_if.drv_cb.wb_cyc_i <= 1'b0;
-  				wb_vi_if.drv_cb.wb_stb_i <= 1'b0;
+  				wb_drv_vi_if.drv_cb.wb_cyc_i <= 1'b0;
+  				wb_drv_vi_if.drv_cb.wb_stb_i <= 1'b0;
   			end
   			else
   			begin
   				//trigger the transmission
-  				@(wb_vi_if.drv_cb);
-  					wb_vi_if.drv_cb.wb_stb_i <= req.wb_stb;
-  					wb_vi_if.drv_cb.wb_cyc_i <= req.wb_cyc;
-  					wb_vi_if.drv_cb.wb_we_i <= req.wb_we;
-  					wb_vi_if.drv_cb.wb_data_i <= req.wb_data;
-  					wb_vi_if.drv_cb.wb_addr_i <= req.wb_addr;
+  				@(wb_drv_vi_if.drv_cb);
+  					wb_drv_vi_if.drv_cb.wb_stb_i <= req.wb_stb;
+  					wb_drv_vi_if.drv_cb.wb_cyc_i <= req.wb_cyc;
+  					wb_drv_vi_if.drv_cb.wb_we_i <= req.wb_we;
+  					wb_drv_vi_if.drv_cb.wb_data_i <= req.wb_data;
+  					wb_drv_vi_if.drv_cb.wb_addr_i <= req.wb_addr;
   				//hold the transmission
-  				repeat(5) @(wb_vi_if.drv_cb);
+  				repeat(5) @(wb_drv_vi_if.drv_cb);
   				//stop the transmission
   				repeat(20) begin
-  					wb_vi_if.drv_cb.wb_stb_i <= 1'b0;
-  					wb_vi_if.drv_cb.wb_cyc_i <= 1'b0;
+  					wb_drv_vi_if.drv_cb.wb_stb_i <= 1'b0;
+  					wb_drv_vi_if.drv_cb.wb_cyc_i <= 1'b0;
   				end
   				//handshaking with sequencer
   				seq_item_port.item_done();
