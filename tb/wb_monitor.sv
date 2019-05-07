@@ -14,7 +14,7 @@ class wb_monitor extends uvm_monitor;
 	endfunction : new
 
 	virtual function void build_phase(input uvm_phase phase);
-		super.build_phase(phase);
+		//super.build_phase(phase);
 		m_num_captured = 0;
 		aport=new("aport",this);
 		uvm_config_db#(virtual mac_interface)::get(this, "", "wb_mon_vi_if", wb_mon_vi_if);

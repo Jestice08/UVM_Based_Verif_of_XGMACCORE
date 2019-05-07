@@ -13,7 +13,7 @@ class wb_driver extends uvm_driver #(wb_transaction_in);
 
   	//configure the virtual interface
   	virtual function void build_phase(input uvm_phase phase);
-    	super.build_phase(phase);
+    	//super.build_phase(phase);
    		uvm_config_db#(virtual mac_interface)::get(this, "", "wb_drv_vi_if", wb_drv_vi_if);
     	if ( wb_drv_vi_if==null )
       		`uvm_fatal(get_name(), "No virtual interface for wishbone driver.");
