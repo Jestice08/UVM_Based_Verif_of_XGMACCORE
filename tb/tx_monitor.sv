@@ -31,7 +31,7 @@ class tx_monitor extends uvm_monitor;
 	tx_transaction      tx_packet;
 	
     bit         pkt_in_progress = 0;    //this is just a flag bit to tell you that something is being tranmitted
-    bit [7:0]   rx_data_q[$];   //This is a queue, it is used for storing the tx_data temporily
+    bit [7:0]   tx_data_q[$];   //This is a queue, it is used for storing the tx_data temporily
     int         ii;
     bit         pkt_fihished = 0;
 
@@ -51,8 +51,8 @@ class tx_monitor extends uvm_monitor;
           tx_packet.src_addr[31:0]  = 32'h0;
           tx_packet.ethernet_type   = 16'h0;
           tx_packet.payload = new[0];
-          while ( rx_data_q.size()>0 ) begin  //pop out everything
-            rx_data_q.pop_front();
+          while ( tx_data_q.size()>0 ) begin  //pop out everything
+            tx_data_q.pop_front();
           end
         end   
 		// ---------------------------- SOP cycle end----------------
@@ -62,15 +62,15 @@ class tx_monitor extends uvm_monitor;
 		begin  
 		// -------------------------------- MOP cycle begin----------------
           pkt_in_progress = 1;
-          if ( rx_data_q.size()==0 ) begin
+          if ( tx_data_q.size()==0 ) begin
             tx_packet.src_addr[31:0]  = mon_vi.mon_cb.pkt_tx_data[63:32];
             tx_packet.ethernet_type   = mon_vi.mon_cb.pkt_tx_data[31:16];
-            rx_data_q.push_back(mon_vi.mon_cb.pkt_tx_data[15:8]);
-            rx_data_q.push_back(mon_vi.mon_cb.pkt_tx_data[7:0]);
+            tx_data_q.push_back(mon_vi.mon_cb.pkt_tx_data[15:8]);
+            tx_data_q.push_back(mon_vi.mon_cb.pkt_tx_data[7:0]);
           end
           else begin
             for ( int i=0; i<8; i++ ) begin
-              rx_data_q.push_back( (mon_vi.mon_cb.pkt_tx_data >> (64-8*(i+1))) & 8'hFF );
+              tx_data_q.push_back( (mon_vi.mon_cb.pkt_tx_data >> (64-8*(i+1))) & 8'hFF );
             end
           end
         end   
@@ -81,34 +81,34 @@ class tx_monitor extends uvm_monitor;
 		// -------------------------------- EOP cycle begin----------------
           tx_packet.set_eop= mon_vi.mon_cb.pkt_tx_eop;
           pkt_in_progress = 0;
-          if ( rx_data_q.size()==0 ) begin
+          if ( tx_data_q.size()==0 ) begin
             tx_packet.src_addr[31:0]  = mon_vi.mon_cb.pkt_tx_data[63:32];
             tx_packet.ethernet_type   = mon_vi.mon_cb.pkt_tx_data[31:16];
             if ( mon_vi.mon_cb.pkt_tx_mod==0 ) begin
-              rx_data_q.push_back(mon_vi.mon_cb.pkt_tx_data[15:8]);
-              rx_data_q.push_back(mon_vi.mon_cb.pkt_tx_data[7:0]);
+              tx_data_q.push_back(mon_vi.mon_cb.pkt_tx_data[15:8]);
+              tx_data_q.push_back(mon_vi.mon_cb.pkt_tx_data[7:0]);
             end
             else if ( mon_vi.mon_cb.pkt_tx_mod==7 ) begin
-              rx_data_q.push_back(mon_vi.mon_cb.pkt_tx_data[15:8]);
+              tx_data_q.push_back(mon_vi.mon_cb.pkt_tx_data[15:8]);
             end
           end
           
 		  else begin
             if ( mon_vi.mon_cb.pkt_tx_mod==0 ) begin
               for ( int i=0; i<8; i++ ) begin
-                rx_data_q.push_back( (mon_vi.mon_cb.pkt_tx_data >> (64-8*(i+1))) & 8'hFF );
+                tx_data_q.push_back( (mon_vi.mon_cb.pkt_tx_data >> (64-8*(i+1))) & 8'hFF );
               end
             end
             else begin
               for ( int i=0; i<mon_vi.mon_cb.pkt_tx_mod; i++ ) begin
-                rx_data_q.push_back( (mon_vi.mon_cb.pkt_tx_data >> (64-8*(i+1))) & 8'hFF );
+                tx_data_q.push_back( (mon_vi.mon_cb.pkt_tx_data >> (64-8*(i+1))) & 8'hFF );
               end
             end
           end
-          tx_packet.payload = new[rx_data_q.size()];
+          tx_packet.payload = new[tx_data_q.size()];
           ii = 0;
-          while ( rx_data_q.size()>0 ) begin
-            tx_packet.payload[ii]  = rx_data_q.pop_front();
+          while ( tx_data_q.size()>0 ) begin
+            tx_packet.payload[ii]  = tx_data_q.pop_front();
             ii++;
           end
           pkt_fihished  = 1;
