@@ -34,9 +34,9 @@ class wb_monitor extends uvm_monitor;
 				if (wb_mon_vi_if.mon_cb.wb_ack_o && wb_mon_vi_if.mon_cb.wb_cyc_i && wb_mon_vi_if.mon_cb.wb_stb_i)
 				begin
 					mon_in_wb = wb_transaction_in::type_id::create("mon_in_wb");
-					mon_in_wb.wb_addr = wb_mon_vi_if.wb_adr_i;
-					mon_in_wb.wb_data = wb_mon_vi_if.wb_dat_i;
-					mon_in_wb.wb_we = wb_mon_vi_if.wb_we_i;
+					mon_in_wb.wb_addr = wb_mon_vi_if.mon_cb.wb_adr_i;
+					mon_in_wb.wb_data = wb_mon_vi_if.mon_cb.wb_dat_i;
+					mon_in_wb.wb_we = wb_mon_vi_if.mon_cb.wb_we_i;
 					`uvm_info( get_name(), $psprintf("Wishbone Transaction: \n%0s", mon_in_wb.sprint()), UVM_HIGH)
 					aport.write(mon_in_wb);
 					m_num_captured++;

@@ -34,8 +34,10 @@ class rst_monitor extends uvm_monitor;
 				if (rst_mon_vi_if.mon_cb.reset_156m25_n)
 				begin
 					mon_in_rst = rst_transaction_in::type_id::create("mon_in_rst");
-					//TODO
-					//which value do I want to monitor?
+					mon_in_rst.rst_156m25_n = rst_mon_vi_if.mon_cb.reset_156m25_n;
+					mon_in_rst.rst_xgmii_rx_n = rst_mon_vi_if.mon_cb.reset_xgmii_rx_n;
+					mon_in_rst.rst_xgmii_tx_n = rst_mon_vi_if.mon_cb.reset_xgmii_tx_n;
+					mon_in_rst.wb_rst = rst_mon_vi_if.mon_cb.wb_rst_i;
 					`uvm_info( get_name(), $psprintf("Wishbone Transaction: \n%0s", mon_in_rst.sprint()), UVM_HIGH)
 					aport.write(mon_in_rst);
 					m_num_captured++;
