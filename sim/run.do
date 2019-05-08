@@ -5,7 +5,7 @@ if [file exists work] {
 vlib work
 
 # Compile the sources.
-vlog ../dut/verilog/*.v ../dut/include/*.v
+vlog ../dut/verilog/*.v +incdir+../dut/include/
 vlog +cover -sv ../tb/*.sv 
 
 # Simulate the design.
