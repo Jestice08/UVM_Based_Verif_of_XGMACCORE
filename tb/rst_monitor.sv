@@ -1,6 +1,6 @@
 `ifndef RST_MONITOR__SV
 `define RST_MONITOR__SV
-
+`include  "rst_seq_item.sv"
 
 class rst_monitor extends uvm_monitor;
 	`uvm_component_utils(rst_monitor)

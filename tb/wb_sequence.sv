@@ -1,6 +1,8 @@
 `ifndef WB_SEQUENCE__SV
 `define WB_SEQUENCE__SV
 
+`include "wb_seq_item.sv"
+
 class wb_sequence_config extends uvm_sequence #(wb_transaction_in);
 
 	`uvm_object_utils(wb_sequence_config)

@@ -1,13 +1,13 @@
 `ifndef RX_AGENT_SV
 `define RX_AGENT_SV
 
-`inculde "rx_monitor.sv"
+`include "rx_monitor.sv"
 
 class rx_agent extends uvm_agent;
 
 	`uvm_component_utils (rx_agent)
 	
-	uvm_analysis_port #(rx_transaction) rx_agt_aport;
+	uvm_analysis_port #(tx_transaction) rx_agt_aport;
 
 	rx_monitor		rx_monitor_h;
 	

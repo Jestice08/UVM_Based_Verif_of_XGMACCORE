@@ -1,5 +1,6 @@
 //This is env module
 //Designed by Xuezhi Teng
+
 `ifndef MAC_ENV_SV
 `define MAC_ENV_SV
 
@@ -9,6 +10,9 @@
 `include "rx_agent.sv"
 `include "scoreboard.sv"
 
+`include "uvm_macros.svh"
+
+import uvm_pkg::*;
 
 class mac_env extends uvm_env;
 
@@ -18,7 +22,7 @@ class mac_env extends uvm_env;
 	rx_agent			rx_agent_h;
 	scoreboard			scoreboard_h;
 	
-	`uvm_component_utils(env)
+	`uvm_component_utils(mac_env)
 	
 	function new(input string name, input uvm_component parent);
 		super.new(name, parent);

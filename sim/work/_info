@@ -7,15 +7,15 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/misc/scratch/yzheng/UVM_Based_Verif_of_XGMACCORE/sim
+Z0 d/misc/scratch/xteng/verif_project/UVM_Based_Verif_of_XGMACCORE/sim
 vfault_sm
-Z1 !s110 1557337491
+Z1 !s110 1557351026
 !i10b 1
 !s100 NP=aH`6jLC5PA_j3?bQzZ0
 Il:]S`W;=^UJJ5hQN0=7F^2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1557336931
+Z3 w1557276776
 8../dut/verilog/fault_sm.v
 F../dut/verilog/fault_sm.v
 Z4 L0 41
@@ -23,7 +23,7 @@ Z5 OL;L;10.6;65
 r1
 !s85 0
 31
-Z6 !s108 1557337491.000000
+Z6 !s108 1557351026.000000
 Z7 !s107 ../dut/include//utils.v|../dut/include//CRC32_D8.v|../dut/include//CRC32_D64.v|../dut/include//defines.v|../dut/verilog/xge_mac.v|../dut/verilog/wishbone_if.v|../dut/verilog/tx_hold_fifo.v|../dut/verilog/tx_enqueue.v|../dut/verilog/tx_dequeue.v|../dut/verilog/tx_data_fifo.v|../dut/verilog/sync_clk_xgmii_tx.v|../dut/verilog/sync_clk_wb.v|../dut/verilog/sync_clk_core.v|../dut/verilog/rx_hold_fifo.v|../dut/verilog/rx_enqueue.v|../dut/verilog/rx_dequeue.v|../dut/verilog/rx_data_fifo.v|../dut/verilog/meta_sync_single.v|../dut/verilog/meta_sync.v|../dut/verilog/generic_mem_small.v|../dut/verilog/generic_mem_medium.v|../dut/verilog/generic_fifo_ctrl.v|../dut/verilog/generic_fifo.v|../dut/verilog/fault_sm.v|
 Z8 !s90 ../dut/verilog/fault_sm.v|../dut/verilog/generic_fifo.v|../dut/verilog/generic_fifo_ctrl.v|../dut/verilog/generic_mem_medium.v|../dut/verilog/generic_mem_small.v|../dut/verilog/meta_sync.v|../dut/verilog/meta_sync_single.v|../dut/verilog/rx_data_fifo.v|../dut/verilog/rx_dequeue.v|../dut/verilog/rx_enqueue.v|../dut/verilog/rx_hold_fifo.v|../dut/verilog/sync_clk_core.v|../dut/verilog/sync_clk_wb.v|../dut/verilog/sync_clk_xgmii_tx.v|../dut/verilog/tx_data_fifo.v|../dut/verilog/tx_dequeue.v|../dut/verilog/tx_enqueue.v|../dut/verilog/tx_hold_fifo.v|../dut/verilog/wishbone_if.v|../dut/verilog/xge_mac.v|+incdir+../dut/include/|
 !i113 0

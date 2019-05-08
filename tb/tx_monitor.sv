@@ -6,7 +6,7 @@
 
 class tx_monitor extends uvm_monitor;
 
-	`uvm_component_utils(tx_moniter)
+	`uvm_component_utils(tx_monitor)
 	
 	uvm_analysis_port #(tx_transaction) tx_mon_aport;
 	

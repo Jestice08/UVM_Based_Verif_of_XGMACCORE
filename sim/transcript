@@ -1,6 +1,6 @@
 # do run.do
 # Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 12:44:51 on May 08,2019
+# Start time: 16:30:26 on May 08,2019
 # vlog ../dut/verilog/fault_sm.v ../dut/verilog/generic_fifo.v ../dut/verilog/generic_fifo_ctrl.v ../dut/verilog/generic_mem_medium.v ../dut/verilog/generic_mem_small.v ../dut/verilog/meta_sync.v ../dut/verilog/meta_sync_single.v ../dut/verilog/rx_data_fifo.v ../dut/verilog/rx_dequeue.v ../dut/verilog/rx_enqueue.v ../dut/verilog/rx_hold_fifo.v ../dut/verilog/sync_clk_core.v ../dut/verilog/sync_clk_wb.v ../dut/verilog/sync_clk_xgmii_tx.v ../dut/verilog/tx_data_fifo.v ../dut/verilog/tx_dequeue.v ../dut/verilog/tx_enqueue.v ../dut/verilog/tx_hold_fifo.v ../dut/verilog/wishbone_if.v ../dut/verilog/xge_mac.v "+incdir+../dut/include/" 
 # -- Compiling module fault_sm
 # -- Compiling module generic_fifo
@@ -25,422 +25,427 @@
 # 
 # Top level modules:
 # 	xge_mac
-# End time: 12:44:51 on May 08,2019, Elapsed time: 0:00:00
+# End time: 16:30:26 on May 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 12:44:52 on May 08,2019
+# Start time: 16:30:26 on May 08,2019
 # vlog "+cover" -sv ../tb/mac_env.sv ../tb/mac_interface.sv ../tb/mac_tb.sv ../tb/mac_test.sv ../tb/mac_top.sv ../tb/rst_agent.sv ../tb/rst_driver.sv ../tb/rst_monitor.sv ../tb/rst_seq_item.sv ../tb/rst_sequence.sv ../tb/rx_agent.sv ../tb/rx_monitor.sv ../tb/scoreboard.sv ../tb/seq_of_commands.sv ../tb/tx_agent.sv ../tb/tx_driver.sv ../tb/tx_monitor.sv ../tb/tx_sequence.sv ../tb/virtual_sequencer.sv ../tb/wb_agent.sv ../tb/wb_driver.sv ../tb/wb_monitor.sv ../tb/wb_seq_item.sv ../tb/wb_sequence.sv 
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/rst_driver.sv(4): near "uvm_driver": syntax error, unexpected IDENTIFIER.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/rst_driver.sv(4): Error in class extension specification.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/rst_driver.sv(4): near "#": syntax error, unexpected '#', expecting class.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/rst_driver.sv(4): near "(": syntax error, unexpected '(', expecting class.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_sequence.sv(4): near "uvm_sequence": syntax error, unexpected IDENTIFIER.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_sequence.sv(4): Error in class extension specification.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_sequence.sv(4): near "#": syntax error, unexpected '#', expecting class.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/rst_driver.sv(4): near "uvm_driver": syntax error, unexpected IDENTIFIER.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/rst_driver.sv(4): Error in class extension specification.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/rst_driver.sv(4): near "#": syntax error, unexpected '#', expecting class.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/rst_monitor.sv(5): near "uvm_monitor": syntax error, unexpected IDENTIFIER.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/rst_monitor.sv(5): Error in class extension specification.
-# ** Note: (vlog-2286) ../tb/rst_monitor.sv(8): Using implicit +incdir+/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# ** Warning: (vlog-13184) ../tb/rst_seq_item.sv(24): The Verilog preprocessor found an `endif directive matched to an `if directive in a different file: ../tb/rst_monitor.sv(5)
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/rst_driver.sv(4): near "(": syntax error, unexpected '(', expecting class.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_agent.sv(14): Invalid type 'rst_driver'. Please check the type of the variable 'rst_driver_h'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_agent.sv(15): Invalid type 'rst_monitor'. Please check the type of the variable 'rst_monitor_h'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_agent.sv(25): (vlog-2730) Undefined variable: 'rst_driver_h'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_agent.sv(25): (vlog-2164) Class or package 'rst_driver' not found.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_agent.sv(25): (vlog-2730) Undefined variable: 'rst_driver'.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_agent.sv(25): near "::": syntax error, unexpected ::, expecting ';'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_agent.sv(26): (vlog-2730) Undefined variable: 'rst_monitor_h'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_agent.sv(26): (vlog-2164) Class or package 'rst_monitor' not found.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_agent.sv(26): (vlog-2730) Undefined variable: 'rst_monitor'.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_agent.sv(26): near "::": syntax error, unexpected ::, expecting ';'.
-# ** Warning: (vlog-13184) ../tb/rst_agent.sv(37): The Verilog preprocessor found an `endif directive matched to an `if directive in a different file: ../tb/rst_monitor.sv(1)
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rst_sequence.sv(4): near "(": syntax error, unexpected '(', expecting class.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rx_agent.sv(4): (vlog-2163) Macro `inculde is undefined.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rx_agent.sv(4): near "rx_monitor.sv": syntax error, unexpected STRING_LITERAL, expecting class.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** while parsing macro expansion: 'uvm_component_utils' starting at ../tb/rx_monitor.sv(6)
-# ** at ../tb/rx_monitor.sv(6): (vlog-2730) Undefined variable: 'rx_moniter'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rx_monitor.sv(7): (vlog-2730) Undefined variable: 'tx_transaction'.
-# ** Warning: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rx_monitor.sv(16): (vlog-2606) Anonymous formals are allowed with method prototype (pure/extern) only. Treating this as a default type variable.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rx_monitor.sv(26): near ";": syntax error, unexpected ';', expecting '('.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** while parsing macro expansion: 'uvm_info' starting at ../tb/rx_monitor.sv(33)
-# ** at ../tb/rx_monitor.sv(33): Illegal declaration after the statement near line '26'.  Declarations must precede statements.  Look for stray semicolons.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rx_monitor.sv(51): (vlog-2730) Undefined variable: 'rx_packet'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rx_monitor.sv(51): (vlog-2164) Class or package 'tx_transaction' not found.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rx_monitor.sv(51): near "::": syntax error, unexpected ::, expecting ';'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rx_monitor.sv(137): (vlog-2730) Undefined variable: 'rx_packet'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rx_monitor.sv(137): (vlog-2164) Class or package 'tx_transaction' not found.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(6)
-# ** at ../tb/rx_monitor.sv(137): near "::": syntax error, unexpected ::, expecting ';'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(7)
-# ** at ../tb/wb_sequence.sv(4): (vlog-2730) Undefined variable: 'wb_transaction_in'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(7)
-# ** at ../tb/wb_sequence.sv(46): (vlog-2730) Undefined variable: 'wb_transaction_in'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(6)
-# ** at ../tb/rst_agent.sv(7): Typedef 'rst_sequencer' multiply defined.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(6)
-# ** at ../tb/rst_agent.sv(9): Typedef 'rst_agent' multiply defined.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(6)
-# ** at ../tb/rst_agent.sv(15): Invalid type 'rst_monitor'. Please check the type of the variable 'rst_monitor_h'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(6)
-# ** at ../tb/rst_agent.sv(26): (vlog-2730) Undefined variable: 'rst_monitor_h'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(6)
-# ** at ../tb/rst_agent.sv(26): (vlog-2164) Class or package 'rst_monitor' not found.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(6)
-# ** at ../tb/rst_agent.sv(26): (vlog-2730) Undefined variable: 'rst_monitor'.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(6)
-# ** at ../tb/rst_agent.sv(26): near "::": syntax error, unexpected ::, expecting ';'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(7)
+# ** Note: (vlog-2286) ../tb/rst_agent.sv(2): Using implicit +incdir+/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(8)
 # ** while parsing file included at ../tb/wb_agent.sv(5)
-# ** at ../tb/wb_driver.sv(4): (vlog-2730) Undefined variable: 'wb_transaction_in'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(7)
-# ** while parsing file included at ../tb/wb_agent.sv(6)
-# ** at ../tb/wb_monitor.sv(8): (vlog-2730) Undefined variable: 'wb_transaction_in'.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(7)
-# ** while parsing file included at ../tb/wb_agent.sv(6)
-# ** at ../tb/wb_monitor.sv(26): near ";": syntax error, unexpected ';', expecting '('.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(7)
-# ** while parsing file included at ../tb/wb_agent.sv(6)
-# ** at ../tb/wb_monitor.sv(36): (vlog-2730) Undefined variable: 'mon_in_wb'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(7)
-# ** while parsing file included at ../tb/wb_agent.sv(6)
-# ** at ../tb/wb_monitor.sv(36): (vlog-2164) Class or package 'wb_transaction_in' not found.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(7)
-# ** while parsing file included at ../tb/wb_agent.sv(6)
-# ** at ../tb/wb_monitor.sv(36): near "::": syntax error, unexpected ::, expecting ';'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(7)
-# ** at ../tb/wb_agent.sv(7): (vlog-2730) Undefined variable: 'wb_transaction_in'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(7)
-# ** at ../tb/wb_agent.sv(7): Illegal use of 'automatic' for variable declaration (wb_transaction_in).
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(8)
-# ** while parsing file included at ../tb/tx_agent.sv(6)
-# ** at ../tb/tx_driver.sv(24): near "task": syntax error, unexpected task.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(8)
-# ** while parsing file included at ../tb/tx_agent.sv(6)
-# ** at ../tb/scoreboard.sv(14): Invalid type 'wb_transacton_in'. Please check the type of the variable 'wshbn_read_q'.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(8)
-# ** while parsing file included at ../tb/tx_agent.sv(6)
-# ** at ../tb/scoreboard.sv(14): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(8)
-# ** while parsing file included at ../tb/tx_agent.sv(6)
-# ** while parsing macro expansion: 'uvm_declare_p_sequencer' starting at ../tb/seq_of_commands.sv(8)
-# ** at ../tb/seq_of_commands.sv(8): Invalid type 'virtual_sequencer'. Please check the type of the variable 'p_sequencer'.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(8)
-# ** while parsing file included at ../tb/tx_agent.sv(6)
-# ** at ../tb/scoreboard.sv(14): near "$": syntax error, unexpected '$', expecting class.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(8)
-# ** at ../tb/tx_agent.sv(7): (vlog-2163) Macro `inculde is undefined.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing file included at ../tb/mac_env.sv(8)
-# ** at ../tb/tx_agent.sv(7): near "tx_monitor.sv": syntax error, unexpected STRING_LITERAL, expecting class.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** at ../tb/mac_env.sv(17): Invalid type 'tx_agent'. Please check the type of the variable 'tx_agent_h'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** at ../tb/mac_env.sv(18): Invalid type 'rx_agent'. Please check the type of the variable 'rx_agent_h'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** while parsing macro expansion: 'uvm_component_utils' starting at ../tb/mac_env.sv(21)
-# ** at ../tb/mac_env.sv(21): (vlog-2730) Undefined variable: 'env'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** at ../tb/mac_env.sv(30):  Failed to find the name 'creat' in scope 'uvm_component_registry' at verilog_src/uvm-1.1d/src/base/uvm_registry.svh(51).
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** at ../tb/mac_env.sv(31):  Failed to find the name 'creat' in scope 'uvm_component_registry' at verilog_src/uvm-1.1d/src/base/uvm_registry.svh(51).
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** at ../tb/mac_env.sv(32): (vlog-2730) Undefined variable: 'tx_agent_h'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** at ../tb/mac_env.sv(32): (vlog-2164) Class or package 'tx_agent' not found.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** at ../tb/mac_env.sv(32): (vlog-2730) Undefined variable: 'tx_agent'.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** at ../tb/mac_env.sv(32): near "::": syntax error, unexpected ::, expecting ';'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** at ../tb/mac_env.sv(33): (vlog-2730) Undefined variable: 'rx_agent_h'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** at ../tb/mac_env.sv(33): (vlog-2164) Class or package 'rx_agent' not found.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** at ../tb/mac_env.sv(33): (vlog-2730) Undefined variable: 'rx_agent'.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** at ../tb/mac_env.sv(33): near "::": syntax error, unexpected ::, expecting ';'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(9)
-# ** at ../tb/mac_env.sv(34):  Failed to find the name 'type_id' in scope 'scoreboard' at ../tb/scoreboard.sv(10).
-# ** Warning: (vlog-13184) ../tb/mac_env.sv(46): The Verilog preprocessor found an `endif directive matched to an `if directive in a different file: ../tb/scoreboard.sv(4)
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** while parsing file included at ../tb/mac_test.sv(10)
-# ** at ../tb/virtual_sequencer.sv(11): Invalid type 'tx_sequencer'. Please check the type of the variable 'tx_sequencer_h'.
-# ** Error (suppressible): ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/mac_test.sv(90): (vlog-13163) End label 'test_base' does not match class name on line 14.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/mac_test.sv(110): (vlog-2164) Class or package 'reset_sequence' not found.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/mac_test.sv(110): near "::": syntax error, unexpected ::, expecting ')'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/mac_test.sv(111): (vlog-2164) Class or package 'wishbone_init_sequence' not found.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/mac_test.sv(111): near "::": syntax error, unexpected ::, expecting ')'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/mac_test.sv(116): (vlog-2164) Class or package 'virtual_sequence' not found.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** while parsing file included at ../tb/rst_agent.sv(5)
-# ** at ../tb/mac_test.sv(116): near "::": syntax error, unexpected ::, expecting ')'.
-# ** Warning: (vlog-13184) ../tb/mac_test.sv(154): The Verilog preprocessor found an `endif directive matched to an `if directive in a different file: ../tb/tx_driver.sv(3)
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** at ../tb/rst_agent.sv(15): Invalid type 'rst_monitor'. Please check the type of the variable 'rst_monitor_h'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** at ../tb/rst_agent.sv(26): (vlog-2730) Undefined variable: 'rst_monitor_h'.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** at ../tb/rst_agent.sv(26): (vlog-2164) Class or package 'rst_monitor' not found.
-# ** Error: ** while parsing file included at ../tb/mac_env.sv(6)
-# ** at ../tb/rst_agent.sv(26): (vlog-2730) Undefined variable: 'rst_monitor'.
-# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(6)
-# ** at ../tb/rst_agent.sv(26): near "::": syntax error, unexpected ::, expecting ';'.
-# ** Warning: (vlog-13184) ../tb/rst_agent.sv(37): The Verilog preprocessor found an `endif directive matched to an `if directive in a different file: ../tb/tx_agent.sv(3)
-# ** Error: ../tb/mac_env.sv(13): Typedef 'mac_env' multiply defined.
-# ** Error: ../tb/mac_env.sv(17): Invalid type 'tx_agent'. Please check the type of the variable 'tx_agent_h'.
-# ** Error: ../tb/mac_env.sv(18): Invalid type 'rx_agent'. Please check the type of the variable 'rx_agent_h'.
-# ** Error: ** while parsing macro expansion: 'uvm_component_utils' starting at ../tb/mac_env.sv(21)
-# ** at ../tb/mac_env.sv(21): (vlog-2730) Undefined variable: 'env'.
-# ** Error: ../tb/mac_env.sv(30):  Failed to find the name 'creat' in scope 'uvm_component_registry' at verilog_src/uvm-1.1d/src/base/uvm_registry.svh(51).
-# ** Error: ../tb/mac_env.sv(31):  Failed to find the name 'creat' in scope 'uvm_component_registry' at verilog_src/uvm-1.1d/src/base/uvm_registry.svh(51).
-# ** Error: ../tb/mac_env.sv(32): (vlog-2730) Undefined variable: 'tx_agent_h'.
-# ** Error: ../tb/mac_env.sv(32): (vlog-2164) Class or package 'tx_agent' not found.
-# ** Error: ../tb/mac_env.sv(32): (vlog-2730) Undefined variable: 'tx_agent'.
-# ** Error: (vlog-13069) ../tb/mac_env.sv(32): near "::": syntax error, unexpected ::, expecting ';'.
-# ** Error: ../tb/mac_env.sv(33): (vlog-2730) Undefined variable: 'rx_agent_h'.
-# ** Error: ../tb/mac_env.sv(33): (vlog-2164) Class or package 'rx_agent' not found.
-# ** Error: ../tb/mac_env.sv(33): (vlog-2730) Undefined variable: 'rx_agent'.
-# ** Error: (vlog-13069) ../tb/mac_env.sv(33): near "::": syntax error, unexpected ::, expecting ';'.
-# ** Error: ../tb/mac_env.sv(34):  Failed to find the name 'type_id' in scope 'scoreboard' at ../tb/scoreboard.sv(10).
-# ** Error: ** while parsing macro expansion: 'uvm_component_utils' starting at ../tb/tx_monitor.sv(9)
-# ** at ../tb/tx_monitor.sv(9): (vlog-2730) Undefined variable: 'tx_moniter'.
-# ** Warning: ../tb/tx_monitor.sv(20): (vlog-2606) Anonymous formals are allowed with method prototype (pure/extern) only. Treating this as a default type variable.
-# ** Error: ../tb/wb_seq_item.sv(5): Cannot find `include file "define.v" in directories:
+# ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(6): Cannot find `include file "../dut/include/define.v" in directories:
 #     /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src
-# ** Warning: ../tb/wb_seq_item.sv(6): (vlog-2275) 'sequences' already exists and will be overwritten.
-# ** Error: ../tb/wb_seq_item.sv(20): (vlog-2163) Macro `CPUREG_CONFIG0 is undefined.
-# ** Error: (vlog-13069) ../tb/wb_seq_item.sv(20): near "||": syntax error, unexpected ||.
-# ** Error: ../tb/wb_seq_item.sv(21): (vlog-2163) Macro `CPUREG_INT_PENDING is undefined.
-# ** Error: ../tb/wb_seq_item.sv(22): (vlog-2163) Macro `CPUREG_INT_STATUS is undefined.
-# ** Error: ../tb/wb_seq_item.sv(23): (vlog-2163) Macro `CPUREG_INT_MASK is undefined.
-# ** Error: End of source encountered before `endif directive closing region starting at file '../tb/rx_agent.sv' line 1.
-# ** Error: (vlog-13069) syntax error, unexpected end of source code, expecting class.
-# End time: 12:44:52 on May 08,2019, Elapsed time: 0:00:00
-# Errors: 111, Warnings: 8
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(8)
+# ** while parsing file included at ../tb/wb_agent.sv(5)
+# ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(21): (vlog-2163) Macro `CPUREG_CONFIG0 is undefined.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(8)
+# ** while parsing file included at ../tb/wb_agent.sv(5)
+# ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(21): near "||": syntax error, unexpected ||.
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(8)
+# ** while parsing file included at ../tb/wb_agent.sv(5)
+# ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(22): (vlog-2163) Macro `CPUREG_INT_PENDING is undefined.
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(8)
+# ** while parsing file included at ../tb/wb_agent.sv(5)
+# ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(23): (vlog-2163) Macro `CPUREG_INT_STATUS is undefined.
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(8)
+# ** while parsing file included at ../tb/wb_agent.sv(5)
+# ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(24): (vlog-2163) Macro `CPUREG_INT_MASK is undefined.
+# ** Warning: ** while parsing file included at ../tb/mac_env.sv(9)
+# ** while parsing file included at ../tb/tx_agent.sv(7)
+# ** at ../tb/tx_monitor.sv(20): (vlog-2606) Anonymous formals are allowed with method prototype (pure/extern) only. Treating this as a default type variable.
+# ** Warning: ** while parsing file included at ../tb/mac_env.sv(10)
+# ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/rx_monitor.sv(16): (vlog-2606) Anonymous formals are allowed with method prototype (pure/extern) only. Treating this as a default type variable.
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/scoreboard.sv(14): Invalid type 'wb_transacton_in'. Please check the type of the variable 'wshbn_read_q'.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/scoreboard.sv(14): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(6): Illegal use of 'automatic' for variable declaration (clk_156m25).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(7): Illegal use of 'automatic' for variable declaration (clk_xgmii_rx).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(8): Illegal use of 'automatic' for variable declaration (clk_xgmii_tx).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(9): Illegal use of 'automatic' for variable declaration (wb_clk_i).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(10): Illegal use of 'automatic' for variable declaration (reset_156m25_n).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(11): Illegal use of 'automatic' for variable declaration (reset_xgmii_rx_n).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(12): Illegal use of 'automatic' for variable declaration (reset_xgmii_tx_n).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(14): Illegal use of 'automatic' for variable declaration (wb_rst_i).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): Illegal use of 'automatic' for variable declaration (pkt_rx_ren).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): Illegal use of 'automatic' for variable declaration (pkt_tx_eop).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): Illegal use of 'automatic' for variable declaration (pkt_tx_sop).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): Illegal use of 'automatic' for variable declaration (pkt_tx_val).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): Illegal use of 'automatic' for variable declaration (pkt_rx_avail).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): Illegal use of 'automatic' for variable declaration (pkt_rx_eop).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): Illegal use of 'automatic' for variable declaration (pkt_rx_err).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): Illegal use of 'automatic' for variable declaration (pkt_rx_sop).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): Illegal use of 'automatic' for variable declaration (pkt_rx_val).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): Illegal use of 'automatic' for variable declaration (pkt_tx_full).
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): A static declaration may not use any non-static references in its initial expression
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): A static declaration may not use any non-static references in its initial expression
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): A static declaration may not use any non-static references in its initial expression
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): A static declaration may not use any non-static references in its initial expression
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): A static declaration may not use any non-static references in its initial expression
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): A static declaration may not use any non-static references in its initial expression
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): A static declaration may not use any non-static references in its initial expression
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): A static declaration may not use any non-static references in its initial expression
+# ** Error: ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_interface.sv(17): A static declaration may not use any non-static references in its initial expression
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/scoreboard.sv(14): near "$": syntax error, unexpected '$', expecting class.
+# ** Error: ../tb/mac_env.sv(34):  Failed to find the name 'creat' in scope 'uvm_component_registry' at verilog_src/uvm-1.1d/src/base/uvm_registry.svh(51).
+# ** Error: ../tb/mac_env.sv(35):  Failed to find the name 'creat' in scope 'uvm_component_registry' at verilog_src/uvm-1.1d/src/base/uvm_registry.svh(51).
+# ** Error: ../tb/mac_env.sv(36):  Failed to find the name 'creat' in scope 'uvm_component_registry' at verilog_src/uvm-1.1d/src/base/uvm_registry.svh(51).
+# ** Error: ../tb/mac_env.sv(37):  Failed to find the name 'creat' in scope 'uvm_component_registry' at verilog_src/uvm-1.1d/src/base/uvm_registry.svh(51).
+# ** Error: ../tb/mac_env.sv(38):  Failed to find the name 'type_id' in scope 'scoreboard' at ../tb/scoreboard.sv(10).
+# ** Warning: (vlog-13184) ../tb/mac_env.sv(50): The Verilog preprocessor found an `endif directive matched to an `if directive in a different file: ../tb/scoreboard.sv(4)
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(9)
+# ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(6): Cannot find `include file "../dut/include/define.v" in directories:
+#     /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(9)
+# ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(11): Typedef 'wb_transaction_in' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(9)
+# ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(21): (vlog-2163) Macro `CPUREG_CONFIG0 is undefined.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_test.sv(9)
+# ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(21): near "||": syntax error, unexpected ||.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(9)
+# ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(22): (vlog-2163) Macro `CPUREG_INT_PENDING is undefined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(9)
+# ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(23): (vlog-2163) Macro `CPUREG_INT_STATUS is undefined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(9)
+# ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(24): (vlog-2163) Macro `CPUREG_INT_MASK is undefined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(10)
+# ** at ../tb/tx_sequence.sv(11): Typedef 'tx_transaction' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(10)
+# ** at ../tb/tx_sequence.sv(55): Typedef 'tx_transaction_basic' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(10)
+# ** at ../tb/tx_sequence.sv(81): Typedef 'tx_sequence' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(7)
+# ** while parsing file included at ../tb/rst_agent.sv(8)
+# ** while parsing file included at ../tb/rst_driver.sv(4)
+# ** at ../tb/rst_seq_item.sv(10): Typedef 'rst_transaction_in' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(7)
+# ** while parsing file included at ../tb/rst_agent.sv(8)
+# ** at ../tb/rst_driver.sv(5): Typedef 'rst_driver' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(7)
+# ** while parsing file included at ../tb/rst_agent.sv(9)
+# ** at ../tb/rst_monitor.sv(5): Typedef 'rst_monitor' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(7)
+# ** at ../tb/rst_agent.sv(10): Typedef 'rst_sequencer' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(7)
+# ** at ../tb/rst_agent.sv(12): Typedef 'rst_agent' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(8)
+# ** while parsing file included at ../tb/wb_agent.sv(5)
+# ** at ../tb/wb_driver.sv(6): Typedef 'wb_driver' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(8)
+# ** while parsing file included at ../tb/wb_agent.sv(6)
+# ** at ../tb/wb_monitor.sv(5): Typedef 'wb_monitor' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(8)
+# ** at ../tb/wb_agent.sv(7): Typedef 'wb_sequencer' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(8)
+# ** at ../tb/wb_agent.sv(9): Typedef 'wb_agent' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(9)
+# ** while parsing file included at ../tb/tx_agent.sv(6)
+# ** at ../tb/tx_driver.sv(8): Typedef 'tx_driver' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(9)
+# ** while parsing file included at ../tb/tx_agent.sv(7)
+# ** at ../tb/tx_monitor.sv(7): Typedef 'tx_monitor' multiply defined.
+# ** Warning: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(9)
+# ** while parsing file included at ../tb/tx_agent.sv(7)
+# ** at ../tb/tx_monitor.sv(20): (vlog-2606) Anonymous formals are allowed with method prototype (pure/extern) only. Treating this as a default type variable.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(9)
+# ** at ../tb/tx_agent.sv(9): Typedef 'tx_sequencer' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(9)
+# ** at ../tb/tx_agent.sv(11): Typedef 'tx_agent' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(10)
+# ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/rx_monitor.sv(4): Typedef 'rx_monitor' multiply defined.
+# ** Warning: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(10)
+# ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/rx_monitor.sv(16): (vlog-2606) Anonymous formals are allowed with method prototype (pure/extern) only. Treating this as a default type variable.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(10)
+# ** at ../tb/rx_agent.sv(6): Typedef 'rx_agent' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/scoreboard.sv(7): Typedef 'packet_comparator' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/scoreboard.sv(10): Typedef 'scoreboard' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/scoreboard.sv(14): Invalid type 'wb_transacton_in'. Please check the type of the variable 'wshbn_read_q'.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/scoreboard.sv(14): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(8): Illegal use of 'automatic' for variable declaration (pkt_rx_ren).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(8): Illegal use of 'automatic' for variable declaration (pkt_tx_eop).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(8): Illegal use of 'automatic' for variable declaration (pkt_tx_sop).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(8): Illegal use of 'automatic' for variable declaration (pkt_tx_val).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(8): Illegal use of 'automatic' for variable declaration (pkt_rx_avail).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(8): Illegal use of 'automatic' for variable declaration (pkt_rx_eop).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(8): Illegal use of 'automatic' for variable declaration (pkt_rx_err).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(8): Illegal use of 'automatic' for variable declaration (pkt_rx_sop).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(8): Illegal use of 'automatic' for variable declaration (pkt_rx_val).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(8): Illegal use of 'automatic' for variable declaration (pkt_tx_full).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(21): (vlog-2730) Undefined variable: 'clk_156m25'.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(22): (vlog-2730) Undefined variable: 'clk_xgmii_rx'.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(23): (vlog-2730) Undefined variable: 'clk_xgmii_tx'.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/mac_top.sv(24): (vlog-2730) Undefined variable: 'wb_clk_i'.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/scoreboard.sv(14): near "$": syntax error, unexpected '$', expecting class.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** while parsing file included at ../tb/rst_agent.sv(8)
+# ** while parsing file included at ../tb/rst_driver.sv(4)
+# ** at ../tb/rst_seq_item.sv(10): Typedef 'rst_transaction_in' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** while parsing file included at ../tb/rst_agent.sv(8)
+# ** at ../tb/rst_driver.sv(5): Typedef 'rst_driver' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** while parsing file included at ../tb/rst_agent.sv(9)
+# ** at ../tb/rst_monitor.sv(5): Typedef 'rst_monitor' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/rst_agent.sv(10): Typedef 'rst_sequencer' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** while parsing file included at ../tb/mac_env.sv(11)
+# ** at ../tb/rst_agent.sv(12): Typedef 'rst_agent' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** at ../tb/mac_env.sv(17): Typedef 'mac_env' multiply defined.
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** at ../tb/mac_env.sv(34):  Failed to find the name 'creat' in scope 'uvm_component_registry' at verilog_src/uvm-1.1d/src/base/uvm_registry.svh(51).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** at ../tb/mac_env.sv(35):  Failed to find the name 'creat' in scope 'uvm_component_registry' at verilog_src/uvm-1.1d/src/base/uvm_registry.svh(51).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** at ../tb/mac_env.sv(36):  Failed to find the name 'creat' in scope 'uvm_component_registry' at verilog_src/uvm-1.1d/src/base/uvm_registry.svh(51).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** at ../tb/mac_env.sv(37):  Failed to find the name 'creat' in scope 'uvm_component_registry' at verilog_src/uvm-1.1d/src/base/uvm_registry.svh(51).
+# ** Error: ** while parsing file included at ../tb/mac_test.sv(11)
+# ** at ../tb/mac_env.sv(38):  Failed to find the name 'type_id' in scope 'scoreboard' at ../tb/scoreboard.sv(10).
+# ** Warning: (vlog-13184) ../tb/mac_env.sv(50): The Verilog preprocessor found an `endif directive matched to an `if directive in a different file: ../tb/scoreboard.sv(4)
+# ** Error (suppressible): ../tb/mac_test.sv(92): (vlog-13163) End label 'test_base' does not match class name on line 16.
+# ** Error: ../tb/mac_test.sv(112): (vlog-2164) Class or package 'reset_sequence' not found.
+# ** Error: (vlog-13069) ../tb/mac_test.sv(112): near "::": syntax error, unexpected ::, expecting ')'.
+# ** Error: ../tb/mac_test.sv(113): (vlog-2164) Class or package 'wishbone_init_sequence' not found.
+# ** Error: (vlog-13069) ../tb/mac_test.sv(113): near "::": syntax error, unexpected ::, expecting ')'.
+# ** Error: ../tb/mac_test.sv(118): (vlog-2164) Class or package 'virtual_sequence' not found.
+# ** Error: (vlog-13069) ../tb/mac_test.sv(118): near "::": syntax error, unexpected ::, expecting ')'.
+# ** Warning: (vlog-13184) ../tb/mac_test.sv(156): The Verilog preprocessor found an `endif directive matched to an `if directive in a different file: ../tb/mac_env.sv(4)
+# ** Error: ** while parsing file included at ../tb/rst_driver.sv(4)
+# ** at ../tb/rst_seq_item.sv(10): Typedef 'rst_transaction_in' multiply defined.
+# ** Error: ../tb/rst_driver.sv(5): Typedef 'rst_driver' multiply defined.
+# ** Error: ** while parsing file included at ../tb/rst_monitor.sv(3)
+# ** at ../tb/rst_seq_item.sv(10): Typedef 'rst_transaction_in' multiply defined.
+# ** Error: ../tb/rst_monitor.sv(5): Typedef 'rst_monitor' multiply defined.
+# ** Error: ../tb/rst_seq_item.sv(10): Typedef 'rst_transaction_in' multiply defined.
+# ** Error: ../tb/rst_sequence.sv(8): Typedef 'rst_sequence' multiply defined.
+# ** Error: ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/rx_monitor.sv(4): Typedef 'rx_monitor' multiply defined.
+# ** Error: ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/rx_monitor.sv(6): (vlog-2163) Macro `uvm_component_utils is undefined.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/rx_monitor.sv(6): near "(": syntax error, unexpected '(', expecting function or task or "SystemVerilog keyword 'pure'".
+# ** Error: ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/rx_monitor.sv(6): (vlog-2163) Macro `uvm_component_utils is undefined.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/rx_monitor.sv(6): near "(": syntax error, unexpected '(', expecting function or task or "SystemVerilog keyword 'pure'".
+# ** Error: ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/scoreboard.sv(14): Invalid type 'wb_transacton_in'. Please check the type of the variable 'wshbn_read_q'.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/scoreboard.sv(14): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+# ** Error: ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/seq_of_commands.sv(7): (vlog-2163) Macro `uvm_object_utils is undefined.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/seq_of_commands.sv(7): near "(": syntax error, unexpected '(', expecting function or task or "SystemVerilog keyword 'pure'".
+# ** Error (suppressible): ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** while parsing file included at ../tb/tx_agent.sv(6)
+# ** while parsing file included at ../tb/tx_driver.sv(6)
+# ** at ../tb/tx_sequence.sv(8): (vlog-2744) An import statement is illegal when directly within a class scope.
+# ** Warning: ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** while parsing file included at ../tb/tx_agent.sv(7)
+# ** at ../tb/tx_monitor.sv(20): (vlog-2606) Anonymous formals are allowed with method prototype (pure/extern) only. Treating this as a default type variable.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/scoreboard.sv(14): near "$": syntax error, unexpected '$'.
+# ** Error: ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/seq_of_commands.sv(7): (vlog-13205) Syntax error found in the scope following 's'. Is there a missing '::'?
+# ** Error (suppressible): ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** while parsing file included at ../tb/tx_driver.sv(6)
+# ** at ../tb/tx_sequence.sv(8): (vlog-2744) An import statement is illegal when directly within a class scope.
+# ** Error: ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** while parsing file included at ../tb/tx_driver.sv(6)
+# ** at ../tb/tx_sequence.sv(11): Typedef 'tx_transaction' multiply defined.
+# ** Error: ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** while parsing file included at ../tb/tx_driver.sv(6)
+# ** at ../tb/tx_sequence.sv(55): Typedef 'tx_transaction_basic' multiply defined.
+# ** Error: ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** while parsing file included at ../tb/tx_driver.sv(6)
+# ** at ../tb/tx_sequence.sv(81): Typedef 'tx_sequence' multiply defined.
+# ** Error: ** while parsing file included at ../tb/rx_agent.sv(4)
+# ** at ../tb/tx_driver.sv(8): Typedef 'tx_driver' multiply defined.
+# ** Error: (vlog-13069) ../tb/rx_monitor.sv(6): near "r": syntax error, unexpected IDENTIFIER.
+# ** Error: ../tb/rx_monitor.sv(6): (vlog-13205) Syntax error found in the scope following 'r'. Is there a missing '::'?
+# ** Error: (vlog-13069) ../tb/rx_agent.sv(12): near "class": syntax error, unexpected class, expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# ** Error (suppressible): ../tb/tx_sequence.sv(8): (vlog-2744) An import statement is illegal when directly within a class scope.
+# ** Error: ../tb/tx_sequence.sv(11): Typedef 'tx_transaction' multiply defined.
+# ** Error: ../tb/tx_sequence.sv(55): Typedef 'tx_transaction_basic' multiply defined.
+# ** Error: ../tb/tx_sequence.sv(81): Typedef 'tx_sequence' multiply defined.
+# ** Error: ../tb/virtual_sequencer.sv(7): (vlog-2163) Macro `uvm_component_utils is undefined.
+# ** Error: (vlog-13069) ../tb/virtual_sequencer.sv(7): near "(": syntax error, unexpected '(', expecting function or task or "SystemVerilog keyword 'pure'".
+# ** Error: ** while parsing file included at ../tb/wb_agent.sv(5)
+# ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(6): Cannot find `include file "../dut/include/define.v" in directories:
+#     /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error (suppressible): ** while parsing file included at ../tb/wb_agent.sv(5)
+# ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(9): (vlog-2744) An import statement is illegal when directly within a class scope.
+# ** Error: ** while parsing file included at ../tb/wb_agent.sv(5)
+# ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(21): (vlog-2163) Macro `CPUREG_CONFIG0 is undefined.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/wb_agent.sv(5)
+# ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(21): near "||": syntax error, unexpected ||.
+# ** Error: ** while parsing file included at ../tb/wb_agent.sv(5)
+# ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(22): (vlog-2163) Macro `CPUREG_INT_PENDING is undefined.
+# ** Error: ** while parsing file included at ../tb/wb_agent.sv(5)
+# ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(23): (vlog-2163) Macro `CPUREG_INT_STATUS is undefined.
+# ** Error: ** while parsing file included at ../tb/wb_agent.sv(5)
+# ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(24): (vlog-2163) Macro `CPUREG_INT_MASK is undefined.
+# ** Error: ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(6): Cannot find `include file "../dut/include/define.v" in directories:
+#     /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(9): near "import": syntax error, unexpected "SystemVerilog keyword 'import'".
+# ** Error: ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/virtual_sequencer.sv(7): (vlog-13205) Syntax error found in the scope following 'v'. Is there a missing '::'?
+# ** Error: ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_monitor.sv(5): Typedef 'wb_monitor' multiply defined.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_monitor.sv(5): near "uvm_monitor": syntax error, unexpected IDENTIFIER.
+# ** Error: ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_monitor.sv(5): Error in class extension specification.
+# ** Error: ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(6): Cannot find `include file "../dut/include/define.v" in directories:
+#     /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error (suppressible): ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(9): (vlog-2744) An import statement is illegal when directly within a class scope.
+# ** Error: ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(21): (vlog-2163) Macro `CPUREG_CONFIG0 is undefined.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(21): near "||": syntax error, unexpected ||.
+# ** Error: ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(22): (vlog-2163) Macro `CPUREG_INT_PENDING is undefined.
+# ** Error: ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(23): (vlog-2163) Macro `CPUREG_INT_STATUS is undefined.
+# ** Error: ** while parsing file included at ../tb/wb_driver.sv(4)
+# ** at ../tb/wb_seq_item.sv(24): (vlog-2163) Macro `CPUREG_INT_MASK is undefined.
+# ** Warning: (vlog-13184) ../tb/wb_driver.sv(59): The Verilog preprocessor found an `endif directive matched to an `if directive in a different file: ../tb/wb_monitor.sv(1)
+# ** Error: ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(6): Cannot find `include file "../dut/include/define.v" in directories:
+#     /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error (suppressible): ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(9): (vlog-2744) An import statement is illegal when directly within a class scope.
+# ** Error: ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(11): Typedef 'wb_transaction_in' multiply defined.
+# ** Error: ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(21): (vlog-2163) Macro `CPUREG_CONFIG0 is undefined.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(21): near "||": syntax error, unexpected ||.
+# ** Error: ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(22): (vlog-2163) Macro `CPUREG_INT_PENDING is undefined.
+# ** Error: ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(23): (vlog-2163) Macro `CPUREG_INT_STATUS is undefined.
+# ** Error: ** while parsing file included at ../tb/wb_sequence.sv(4)
+# ** at ../tb/wb_seq_item.sv(24): (vlog-2163) Macro `CPUREG_INT_MASK is undefined.
+# ** Error: End of source encountered before `endif directive closing region starting at file '../tb/wb_seq_item.sv' line 2.
+# End time: 16:30:26 on May 08,2019, Elapsed time: 0:00:00
+# Errors: 164, Warnings: 9
 # ** Error: /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/linux_x86_64/vlog failed.
 # Error in macro ./run.do line 9
 # /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/linux_x86_64/vlog failed.

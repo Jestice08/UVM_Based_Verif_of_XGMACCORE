@@ -1,15 +1,16 @@
+
 `ifndef WB_SEQ_ITEM__SV
 `define WB_SEQ_ITEM__SV
 
 `include "uvm_macros.svh"
-`include "define.v"
-package sequences;
+`include "../dut/include/define.v"
+//package sequences;
 
 import uvm_pkg::*;
 
 class wb_transaction_in extends uvm_sequence_item;
 
-`uvm_object_utils(wb_transaction_in);
+    `uvm_object_utils(wb_transaction_in);
 	rand logic [7:0] wb_addr;
 	rand logic [31:0] wb_data;
 	rand logic wb_cyc, wb_stb, wb_we;

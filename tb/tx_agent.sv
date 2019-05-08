@@ -4,7 +4,7 @@
 `define TX_AGENT_SV
 
 `include "tx_driver.sv"
-`inculde "tx_monitor.sv"
+`include "tx_monitor.sv"
 
 typedef uvm_sequencer #(tx_transaction) tx_sequencer;
 

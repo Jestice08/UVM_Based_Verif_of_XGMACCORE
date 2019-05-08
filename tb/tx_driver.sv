@@ -3,6 +3,8 @@
 `ifndef TX_DRIVER_SV
 `define TX_DRIVER_SV
 
+`include "tx_sequence.sv"
+
 class tx_driver extends uvm_driver #(tx_transaction);  //consume the transaction
 
 	`uvm_component_utils(tx_driver)
@@ -14,22 +16,21 @@ class tx_driver extends uvm_driver #(tx_transaction);  //consume the transaction
         super.new(name,parent);
     endfunction: new
 	
-	function void build_phase(uvm_phase phase);
-    super.build_phase(phase);
-    uvm_config_db#(virtual mac_interface)::get(this, "", "drv_vi", drv_vi);
-    if ( drv_vi==null )
+	virtual function void build_phase(input uvm_phase phase);
+		super.build_phase(phase);
+		uvm_config_db#(virtual mac_interface)::get(this, "", "drv_vi", drv_vi);
+		if ( drv_vi==null )
       `uvm_fatal(get_name(), "Virtual Interface for driver not set!");
-  endfunction : build_phase
+    endfunction : build_phase
   
-	function task run_phase(uvm_phase phase);
+	virtual task run_phase(uvm_phase phase);
     int unsigned    pkt_len_in_bytes;
     int unsigned    num_of_flits;
     bit [2:0]       last_flit_mod;
     bit [63:0]      tx_data;
 
     `uvm_info( get_name(), $sformatf("HIERARCHY: %m"), UVM_HIGH);
-    forever 
-	begin
+    forever begin
 		seq_item_port.try_next_item(req);
 		if (req == null)
 		begin

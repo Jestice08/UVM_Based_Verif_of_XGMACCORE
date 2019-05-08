@@ -1,6 +1,9 @@
+import uvm_pkg::*;
+`include "uvm_macros.svh"
+
 `ifndef rst_AGENT__SV
 `define rst_AGENT__SV
-
+//import uvm_pkg::*;
 
 `include "rst_driver.sv"
 `include "rst_monitor.sv"

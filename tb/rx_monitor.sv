@@ -3,7 +3,7 @@
 
 class rx_monitor extends uvm_monitor;
 
-	`uvm_component_utils(rx_moniter)
+	`uvm_component_utils(rx_monitor)
 	uvm_analysis_port #(tx_transaction) rx_mon_aport;
 
 	virtual mac_interface mon_vi;
