@@ -46,7 +46,33 @@ class tx_transaction extends uvm_sequence_item;
 	endfunction : new
 	
 endclass : tx_transaction
-	
+
+
+//basic transaction
+class tx_transaction_basic extends tx_transaction;
+
+  `uvm_object_utils( tx_transaction_basic )
+
+  constraint C_bringup 
+    {
+      dst_addr      == 48'hAABB_CCDD_EEFF;
+      src_addr      == 48'h1122_3344_5566;
+      ethernet_type        dist { 16'h0800:=34, 16'h0806:=33, 16'h88DD:=33 };  // IPv4, ARP, IPv6
+      payload.size()    inside {[45:54]};
+      foreach( payload[j] )
+        {
+          payload[j]  == j+1;
+        }
+      inter_gap             == 10;
+  }
+
+  function new(input string name="tx_transaction_basic");
+    super.new(name);
+  endfunction : new
+
+endclass : tx_transaction_basic
+
+
 //Sequence starts here:
 
 class tx_sequence extends uvm_sequence # (tx_transaction);
