@@ -11,7 +11,7 @@ class scoreboard extends uvm_scoreboard;
 
   tx_transaction        pkt_tx_agent_q [$];
   tx_transaction        pkt_rx_agent_q [$];
-  wb_transacton_in      wshbn_read_q [$];
+  wb_transaction_in      wshbn_read_q [$];
   
   
   int unsigned  m_matches;
@@ -30,7 +30,7 @@ class scoreboard extends uvm_scoreboard;
   `uvm_analysis_imp_decl( _from_pkt_rx_agent )
   uvm_analysis_imp_from_pkt_rx_agent #( tx_transaction, scoreboard )    scbd_rx_agt_port;
   `uvm_analysis_imp_decl( _from_wshbn_agent )
-  uvm_analysis_imp_from_wshbn_agent #( wb_transacton_in, scoreboard )  scbd_wb_agt_port;
+  uvm_analysis_imp_from_wshbn_agent #( wb_transaction_in, scoreboard )  scbd_wb_agt_port;
 
 
   function new( input string name="scoreboard", input uvm_component parent );
@@ -67,7 +67,7 @@ class scoreboard extends uvm_scoreboard;
   endfunction : write_from_pkt_rx_agent
 
 
-  virtual function write_from_wshbn_agent( wb_transacton_in wshbn_xtxn );
+  virtual function write_from_wshbn_agent( wb_transaction_in wshbn_xtxn );
     `uvm_info( get_name(), $psprintf( "Received wishbone transaction" ), UVM_FULL )
     wshbn_read_q.push_back( wshbn_xtxn );
     check_wshbn_event.trigger( );
@@ -196,7 +196,7 @@ class scoreboard extends uvm_scoreboard;
 //****************************Compare Wishbone item******************************
 
   virtual function void compare_wb( );
-    wb_transacton_in   wb_txn;
+    wb_transaction_in   wb_txn;
     int unsigned    error;
     while ( wshbn_read_q.size() ) begin
       error = 0;

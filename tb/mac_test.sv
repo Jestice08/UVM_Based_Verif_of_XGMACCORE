@@ -89,7 +89,7 @@ class mac_test extends uvm_test;
 //      `uvm_error(get_name(), "***** UVM TEST FAILED *****")
 //  endfunction : report_phase
 
-endclass : test_base
+endclass : mac_test
 
 
 
@@ -109,13 +109,13 @@ class virtual_sequence_test_base extends mac_test;
     virtual_sequencer_h = virtual_sequencer::type_id::create("virtual_sequencer_h", this);
 
     // Reset and Configure sequences remain untouched ===============
-    uvm_config_db #(uvm_object_wrapper)::set(this, "mac_env_h.rst_agent_h.rst_sequencer_h.reset_phase", "default_sequence", reset_sequence::get_type());
-    uvm_config_db #(uvm_object_wrapper)::set(this, "mac_env_h.wb_agent_h.wb_sequencer_h.configure_phase", "default_sequence", wishbone_init_sequence::get_type());
+    uvm_config_db #(uvm_object_wrapper)::set(this, "mac_env_h.rst_agent_h.rst_sequencer_h.reset_phase", "default_sequence", rst_sequence::get_type());
+    uvm_config_db #(uvm_object_wrapper)::set(this, "mac_env_h.wb_agent_h.wb_sequencer_h.configure_phase", "default_sequence", wb_sequence_config::get_type());
     uvm_config_db #(uvm_object_wrapper)::set(this, "mac_env_h.tx_agent_h.tx_sequencer_h.main_phase", "default_sequence", null);
     // ==============================================================
 
     // Run the virtual_sequence on the virtual_sequencer ============
-    uvm_config_db #(uvm_object_wrapper)::set(this, "virtual_sequencer_h.main_phase", "default_sequence", virtual_sequence::get_type() );
+    uvm_config_db #(uvm_object_wrapper)::set(this, "virtual_sequencer_h.main_phase", "default_sequence", seq_of_commands::get_type() );
     // ==============================================================
   endfunction : build_phase
 

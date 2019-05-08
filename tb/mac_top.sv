@@ -4,6 +4,8 @@
 
 module mac_top();
 
+	logic         clk_156m25, clk_xgmii_rx, clk_xgmii_tx, wb_clk_i;
+  	logic         reset_156m25_n, reset_xgmii_rx_n, reset_xgmii_tx_n;
 	//POS-L3
 	logic pkt_rx_ren, pkt_tx_eop, pkt_tx_sop, pkt_tx_val, pkt_rx_avail, pkt_rx_eop, pkt_rx_err, pkt_rx_sop, pkt_rx_val, pkt_tx_full;
 	logic [63:0]  pkt_tx_data, pkt_rx_data;

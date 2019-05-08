@@ -13,7 +13,7 @@ class rx_monitor extends uvm_monitor;
 		super.new(name, parent);
 	endfunction : new
 
-	virtual function void build_phase (input uvm_phase);
+	virtual function void build_phase (input uvm_phase phase);
 		super.build_phase(phase);
 		rx_mon_num = 0;
 		rx_mon_aport = new ("rx_mon_aport", this);
@@ -56,7 +56,7 @@ class rx_monitor extends uvm_monitor;
           				rx_packet.src_addr[47:32] = mon_vi.mon_cb.pkt_tx_data[15:0];
           				rx_packet.src_addr[31:0]  = 32'h0;
           				rx_packet.ethernet_type   = 16'h0;
-          				tx_packet.payload = new[0];	//allocate memory for payload
+          				rx_packet.payload = new[0];	//allocate memory for payload
           				while ( rx_data_q.size()>0 ) begin  //pop out everything
             				rx_data_q.pop_front();
           				end
@@ -84,7 +84,7 @@ class rx_monitor extends uvm_monitor;
     				// -------------------------------- EOP cycle begin----------------
     				if(mon_vi.mon_cb.pkt_rx_eop && pkt_in_progress==1)
     				begin
-    					tx_packet.set_eop = mon_vi.mon_cb.pkt_tx_eop;
+    					rx_packet.set_eop = mon_vi.mon_cb.pkt_tx_eop;
     					pkt_in_progress   = 0;	//finish progress
     					err_in_packet	  = mon_vi.mon_cb.pkt_rx_err;	//error flag
     					mon_vi.mon_cb.pkt_rx_ren <= 1'b0;
@@ -120,10 +120,10 @@ class rx_monitor extends uvm_monitor;
 	            			end
           				end
 
-          				tx_packet.payload = new[rx_data_q.size()];
+          				rx_packet.payload = new[rx_data_q.size()];
           				ii = 0;
             			while ( rx_data_q.size()>0 ) begin
-              				tx_packet.payload[ii]  = rx_data_q.pop_front();
+              				rx_packet.payload[ii]  = rx_data_q.pop_front();
               				ii++;
             			end
             			pkt_fihished = 1;
@@ -137,13 +137,13 @@ class rx_monitor extends uvm_monitor;
     					rx_packet = tx_transaction::type_id::create("rx_packet", this);
     					err_in_packet   			  = mon_vi.mon_cb.pkt_rx_err;
     					mon_vi.mon_cb.pkt_rx_ren 	  <= 1'b0;	//disable read enable
-			            tx_packet.sop_mark            = mon_vi.mon_cb.pkt_rx_sop;
-			            tx_packet.eop_mark            = mon_vi.mon_cb.pkt_rx_eop;
-			            tx_packet.mac_dst_addr        = mon_vi.mon_cb.pkt_rx_data[63:16];
-			            tx_packet.mac_src_addr[47:32] = mon_vi.mon_cb.pkt_rx_data[15:0];
-			            tx_packet.mac_src_addr[31:0]  = 32'h0;
-			            tx_packet.ether_type          = 16'h0;
-			            tx_packet.payload = new[0];
+			            rx_packet.set_sop            = mon_vi.mon_cb.pkt_rx_sop;
+			            rx_packet.set_eop            = mon_vi.mon_cb.pkt_rx_eop;
+			            rx_packet.dst_addr        = mon_vi.mon_cb.pkt_rx_data[63:16];
+			            rx_packet.src_addr[47:32] = mon_vi.mon_cb.pkt_rx_data[15:0];
+			            rx_packet.src_addr[31:0]  = 32'h0;
+			            rx_packet.ethernet_type          = 16'h0;
+			            rx_packet.payload = new[0];
 			            while ( rx_data_q.size()>0 ) begin
 			              	rx_data_q.pop_front();	//clear buffer fifo
 			            end
@@ -153,10 +153,10 @@ class rx_monitor extends uvm_monitor;
           			//copy data into payload
           			if (pkt_fihished) 
           			begin
-            			`uvm_info( get_name(), $psprintf("Packet: \n%0s", tx_packet.sprint()), UVM_HIGH)
-            			if( !err_in_packet && rcv_pkt.sop_mark && rcv_pkt.eop_mark)
+            			`uvm_info( get_name(), $psprintf("Packet: \n%0s", rx_packet.sprint()), UVM_HIGH)
+            			if( !err_in_packet && rx_packet.set_sop && rx_packet.set_eop)
             			begin
-              				ap_rx_mon.write( rcv_pkt );
+              				ap_rx_mon.write( rx_packet );
               				rx_mon_num++;
             			end
             			pkt_fihished = 0;

@@ -3,7 +3,7 @@
 `define WB_SEQ_ITEM__SV
 
 `include "uvm_macros.svh"
-`include "../dut/include/define.v"
+`include "../dut/include/defines.v"
 //package sequences;
 
 import uvm_pkg::*;

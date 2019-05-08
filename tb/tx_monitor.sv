@@ -17,7 +17,7 @@ class tx_monitor extends uvm_monitor;
 		super.new(name, parent);
 	endfunction : new
 	
-	virtual function void build_phase (input uvm_phase);
+	virtual function void build_phase (input uvm_phase phase);
 		super.build_phase(phase);
 		tx_mon_num = 0;
 		tx_mon_aport = new ("tx_mon_aport", this);

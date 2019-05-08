@@ -31,11 +31,11 @@ class mac_env extends uvm_env;
 	
 	virtual function void build_phase (input uvm_phase phase);
 		super.build_phase(phase);
-		rst_agent_h   = rst_agent::type_id::creat("rst_agent_h",this);
-		wb_agent_h	  = wb_agent::type_id::creat("wb_agent_h",this);
-		tx_agent_h    = tx_agent::type_id::creat("tx_agent_h",this);
-		rx_agent_h    = rx_agent::type_id::creat("rx_agent_h", this);
-		scoreboard_h  = scoreboard::type_id::creat("scoreboard_h",this);
+		rst_agent_h   = rst_agent::type_id::create("rst_agent_h",this);
+		wb_agent_h	  = wb_agent::type_id::create("wb_agent_h",this);
+		tx_agent_h    = tx_agent::type_id::create("tx_agent_h",this);
+		rx_agent_h    = rx_agent::type_id::create("rx_agent_h", this);
+		scoreboard_h  = scoreboard::type_id::create("scoreboard_h",this);
 	endfunction : build_phase
 		
 	virtual function void connect_phase (input uvm_phase phase);

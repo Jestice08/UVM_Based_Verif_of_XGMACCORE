@@ -1,6 +1,6 @@
 `ifndef SEQ_OF_COMMANDS__SV
 `define SEQ_OF_COMMANDS__SV
-
+import uvm_pkg::*;
 
 class seq_of_commands extends uvm_sequence;
 
