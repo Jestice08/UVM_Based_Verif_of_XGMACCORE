@@ -15,7 +15,7 @@ class tx_driver extends uvm_driver #(tx_transaction);  //consume the transaction
     endfunction: new
 	
 	function void build_phase(uvm_phase phase);
-    //super.build_phase(phase);
+    super.build_phase(phase);
     uvm_config_db#(virtual mac_interface)::get(this, "", "drv_vi", drv_vi);
     if ( drv_vi==null )
       `uvm_fatal(get_name(), "Virtual Interface for driver not set!");

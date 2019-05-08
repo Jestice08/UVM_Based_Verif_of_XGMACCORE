@@ -23,7 +23,7 @@ class tx_agent extends uvm_agent;
 	endfunction : new
 	
 	virtual function void build_phase (input uvm_phase phase);
-		//super.build_phase (phase);
+		super.build_phase(phase);
 		tx_agt_aport     = new ( "tx_agt_aport", this );
 		tx_sequencer_h   = tx_sequencer::type_id::create( "tx_sequencer_h", this );
 		tx_driver_h      = tx_driver::type_id::create( "tx_driver_h", this );
@@ -31,7 +31,7 @@ class tx_agent extends uvm_agent;
 	endfunction : build_phase
 	
 	virtual function void connect_phase (input uvm_phase phase);
-	    //super.connect_phase ( phase );
+	    super.connect_phase(phase);
 		tx_driver_h.seq_item_port.connect( tx_sequencer_h.seq_item_export );
         tx_monitor_h.tx_mon_aport.connect(tx_agt_aport);   //Connecting the monitor to the outside agent
     endfunction: connect_phase

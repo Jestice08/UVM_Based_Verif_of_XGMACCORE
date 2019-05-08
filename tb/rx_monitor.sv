@@ -14,6 +14,7 @@ class rx_monitor extends uvm_monitor;
 	endfunction : new
 
 	virtual function void build_phase (input uvm_phase);
+		super.build_phase(phase);
 		rx_mon_num = 0;
 		rx_mon_aport = new ("rx_mon_aport", this);
 		uvm_config_db#(virtual mac_interface)::get(this, "", "mon_vi", mon_vi);

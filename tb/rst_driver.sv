@@ -13,12 +13,12 @@ class rst_driver extends uvm_driver #(rst_transaction_in);
 
   	//configure the virtual interface
   	virtual function void build_phase(input uvm_phase phase);
-    	//super.build_phase(phase);
+    	super.build_phase(phase);
    		uvm_config_db#(virtual mac_interface)::get(this, "", "rst_drv_vi_if", rst_drv_vi_if);
     	if ( rst_drv_vi_if==null )
       		`uvm_fatal(get_name(), "No virtual interface for reset driver.");
   	endfunction : build_phase
-    //TODO
+    
   	virtual task run_phase(input uvm_phase phase);
   	 forever begin
   		  seq_item_port.get_next_item(req);//blocking varient

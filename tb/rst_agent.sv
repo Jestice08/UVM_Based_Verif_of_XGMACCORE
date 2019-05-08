@@ -19,7 +19,7 @@ class rst_agent extends uvm_agent;
   	endfunction: new
 
   	virtual function void build_phase(input uvm_phase phase);
-        //super.build_phase(phase);
+        super.build_phase(phase);
         aport=new("aport",this);
         rst_sequencer_h = rst_sequencer::type_id::create("rst_sequencer_h",this);
         rst_driver_h = rst_driver::type_id::create("rst_driver_h",this);
@@ -27,6 +27,7 @@ class rst_agent extends uvm_agent;
     endfunction: build_phase 
 
     virtual function void connect_phase( input uvm_phase phase );
+        super.connect_phase(phase);
         rst_driver_h.seq_item_port.connect(rst_sequencer_h.seq_item_export);
         rst_monitor_h.aport.connect(aport);
     endfunction: connect_phase 
