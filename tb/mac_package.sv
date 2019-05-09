@@ -33,7 +33,7 @@ package mac_pkg;
 	`include "mac_env.sv"
 	//`include "mac_interface.sv"
 	//`include "mac_tb.sv"
-	`include "mac_test.sv"
+	//`include "mac_test.sv"
 	//`include "mac_top.sv"
 	
 	

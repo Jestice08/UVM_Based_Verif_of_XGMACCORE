@@ -1,6 +1,11 @@
 `ifndef WB_MONITOR__SV
 `define WB_MONITOR__SV
 
+`include "uvm_macros.svh"
+
+import uvm_pkg::*;
+import mac_pkg::*;
+
 
 class wb_monitor extends uvm_monitor;
 	`uvm_component_utils(wb_monitor)

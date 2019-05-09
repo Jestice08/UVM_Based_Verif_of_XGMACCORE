@@ -95,7 +95,7 @@ class tx_sequence extends uvm_sequence # (tx_transaction);
 	
 	virtual task pre_start ();
 		if ( starting_phase != null )
-		starting_phase.raise_ojection(this);
+		starting_phase.raise_objection(this);
 	endtask : pre_start
 	
 	virtual task post_start ();

@@ -6,7 +6,7 @@ program mac_tb();
 
   import uvm_pkg::*;
 
-  //`include "testclass.sv"
+  `include "mac_test.sv"
   //`include "test_lib.svh"
 
   initial begin

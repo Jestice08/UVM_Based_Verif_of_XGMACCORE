@@ -2,8 +2,10 @@
 `define RST_MONITOR__SV
 //`include  "rst_seq_item.sv"
 
-import uvm_pkg::*;
 `include "uvm_macros.svh"
+
+import uvm_pkg::*;
+import mac_pkg::*;
 
 class rst_monitor extends uvm_monitor;
 	`uvm_component_utils(rst_monitor)

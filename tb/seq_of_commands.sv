@@ -1,6 +1,9 @@
 `ifndef SEQ_OF_COMMANDS__SV
 `define SEQ_OF_COMMANDS__SV
+`include "uvm_macros.svh"
+
 import uvm_pkg::*;
+import mac_pkg::*;
 
 class seq_of_commands extends uvm_sequence;
 
@@ -19,7 +22,7 @@ class seq_of_commands extends uvm_sequence;
 
   	virtual task body();
     	`uvm_do_on( tx_sequence_h, p_sequencer.tx_sequencer_h );
-    	#1000000;
+    	#100;
     	`uvm_do_on( wb_sequence_finish_h, p_sequencer.wb_sequencer_h );
  	 endtask : body
 

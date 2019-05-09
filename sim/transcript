@@ -1,6 +1,6 @@
 # do run.do
 # Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 20:50:21 on May 08,2019
+# Start time: 21:43:35 on May 08,2019
 # vlog ../dut/verilog/fault_sm.v ../dut/verilog/generic_fifo.v ../dut/verilog/generic_fifo_ctrl.v ../dut/verilog/generic_mem_medium.v ../dut/verilog/generic_mem_small.v ../dut/verilog/meta_sync.v ../dut/verilog/meta_sync_single.v ../dut/verilog/rx_data_fifo.v ../dut/verilog/rx_dequeue.v ../dut/verilog/rx_enqueue.v ../dut/verilog/rx_hold_fifo.v ../dut/verilog/sync_clk_core.v ../dut/verilog/sync_clk_wb.v ../dut/verilog/sync_clk_xgmii_tx.v ../dut/verilog/tx_data_fifo.v ../dut/verilog/tx_dequeue.v ../dut/verilog/tx_enqueue.v ../dut/verilog/tx_hold_fifo.v ../dut/verilog/wishbone_if.v ../dut/verilog/xge_mac.v "+incdir+../dut/include/" 
 # -- Compiling module fault_sm
 # -- Compiling module generic_fifo
@@ -25,108 +25,132 @@
 # 
 # Top level modules:
 # 	xge_mac
-# End time: 20:50:21 on May 08,2019, Elapsed time: 0:00:00
+# End time: 21:43:35 on May 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 20:50:21 on May 08,2019
-# vlog "+cover" -sv ../tb/mac_package.sv ./tb/mac_interface.sv ../tb/rst_seq_item.sv ../tb/wb_seq_item.sv ../tb/tx_sequence.sv ../tb/wb_sequence.sv ../tb/rst_sequence.sv ../tb/tx_driver.sv ../tb/wb_driver.sv ../tb/rst_driver.sv ../tb/tx_monitor.sv ../tb/rx_monitor.sv ../tb/wb_monitor.sv ../tb/rst_monitor.sv ../tb/tx_agent.sv ../tb/rx_agent.sv ../tb/wb_agent.sv ../tb/rst_agent.sv ../tb/seq_of_commands.sv ../tb/virtual_sequencer.sv ../tb/scoreboard.sv ../tb/mac_env.sv ../tb/mac_test.sv ../tb/mac_top.sv ../tb/mac_tb.sv 
+# Start time: 21:43:35 on May 08,2019
+# vlog "+cover" -sv ../tb/mac_package.sv ../tb/mac_interface.sv ../tb/rst_seq_item.sv ../tb/wb_seq_item.sv ../tb/tx_sequence.sv ../tb/wb_sequence.sv ../tb/rst_sequence.sv ../tb/tx_driver.sv ../tb/wb_driver.sv ../tb/rst_driver.sv ../tb/tx_monitor.sv ../tb/rx_monitor.sv ../tb/wb_monitor.sv ../tb/rst_monitor.sv ../tb/tx_agent.sv ../tb/rx_agent.sv ../tb/wb_agent.sv ../tb/rst_agent.sv ../tb/seq_of_commands.sv ../tb/virtual_sequencer.sv ../tb/scoreboard.sv ../tb/mac_env.sv ../tb/mac_test.sv ../tb/mac_top.sv ../tb/mac_tb.sv 
 # -- Compiling package mac_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
 # ** Note: (vlog-2286) ../tb/rst_seq_item.sv(6): Using implicit +incdir+/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# ** Warning: ../tb/rx_monitor.sv(65): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
-# ** Warning: ../tb/rx_monitor.sv(152): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
-# ** Warning: ../tb/tx_monitor.sv(55): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
-# ** Error (suppressible): ../tb/mac_test.sv(36): (vlog-7027) The name ('mac_top.mac_if') was not found in the current scope.  Please verify the spelling of the name 'mac_top.mac_if'.
-# ** Warning: ../tb/scoreboard.sv(126): (vlog-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
-# ** Warning: ../tb/scoreboard.sv(137): (vlog-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
-# ** Warning: ../tb/scoreboard.sv(143): (vlog-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
-# ** Warning: ../tb/scoreboard.sv(162): (vlog-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
-# ** Error: (vlog-7) Failed to open design unit file "./tb/mac_interface.sv" in read mode.
-# No such file or directory. (errno = ENOENT)
-# ** Error: ** while parsing file included at ../tb/wb_sequence.sv(4)
-# ** at ../tb/wb_seq_item.sv(11): Typedef 'wb_transaction_in' multiply defined.
-# ** Error: ** while parsing file included at ../tb/rst_sequence.sv(5)
-# ** at ../tb/rst_seq_item.sv(10): Typedef 'rst_transaction_in' multiply defined.
-# ** Error: ** while parsing file included at ../tb/tx_driver.sv(6)
-# ** at ../tb/tx_sequence.sv(11): Typedef 'tx_transaction' multiply defined.
-# ** Error: ** while parsing file included at ../tb/tx_driver.sv(6)
-# ** at ../tb/tx_sequence.sv(55): Typedef 'tx_transaction_basic' multiply defined.
-# ** Error: ** while parsing file included at ../tb/tx_driver.sv(6)
-# ** at ../tb/tx_sequence.sv(81): Typedef 'tx_sequence' multiply defined.
-# ** Error: ** while parsing file included at ../tb/wb_driver.sv(4)
-# ** at ../tb/wb_seq_item.sv(11): Typedef 'wb_transaction_in' multiply defined.
-# ** Error: ../tb/tx_monitor.sv(9): (vlog-2163) Macro `uvm_component_utils is undefined.
-# ** Error: (vlog-13069) ../tb/tx_monitor.sv(9): near "(": syntax error, unexpected '(', expecting function or task or "SystemVerilog keyword 'pure'".
-# ** Error (suppressible): ../tb/rx_monitor.sv(4): (vlog-2744) An import statement is illegal when directly within a class scope.
-# ** Error: (vlog-13069) ../tb/wb_monitor.sv(5): near "class": syntax error, unexpected class.
-# ** Error: ../tb/tx_monitor.sv(9): (vlog-13205) Syntax error found in the scope following 't'. Is there a missing '::'?
-# ** Error (suppressible): ../tb/rst_monitor.sv(5): (vlog-2744) An import statement is illegal when directly within a class scope.
-# ** Error (suppressible): ** while parsing file included at ../tb/tx_agent.sv(6)
-# ** while parsing file included at ../tb/tx_driver.sv(6)
-# ** at ../tb/tx_sequence.sv(8): (vlog-2744) An import statement is illegal when directly within a class scope.
-# ** Error (suppressible): ** while parsing file included at ../tb/rx_agent.sv(4)
-# ** at ../tb/rx_monitor.sv(4): (vlog-2744) An import statement is illegal when directly within a class scope.
-# ** Error: ** while parsing file included at ../tb/rx_agent.sv(4)
-# ** at ../tb/rx_monitor.sv(8): Typedef 'rx_monitor' multiply defined.
-# ** Error (suppressible): ** while parsing file included at ../tb/wb_agent.sv(5)
-# ** while parsing file included at ../tb/wb_driver.sv(4)
-# ** at ../tb/wb_seq_item.sv(9): (vlog-2744) An import statement is illegal when directly within a class scope.
-# ** Error (suppressible): ../tb/rst_agent.sv(5): (vlog-2744) An import statement is illegal when directly within a class scope.
-# ** Error (suppressible): ../tb/rst_agent.sv(7): (vlog-2744) An import statement is illegal when directly within a class scope.
-# ** Error: ../tb/rst_agent.sv(7): (vlog-13006) Could not find the package (mac_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-# ** Error (suppressible): ../tb/seq_of_commands.sv(3): (vlog-2744) An import statement is illegal when directly within a class scope.
-# ** Error: ../tb/seq_of_commands.sv(7): (vlog-2163) Macro `uvm_object_utils is undefined.
-# ** Error: (vlog-13069) ../tb/seq_of_commands.sv(7): near "(": syntax error, unexpected '(', expecting function or task or "SystemVerilog keyword 'pure'".
-# ** Error: ../tb/virtual_sequencer.sv(7): (vlog-2163) Macro `uvm_component_utils is undefined.
-# ** Error: (vlog-13069) ../tb/virtual_sequencer.sv(7): near "(": syntax error, unexpected '(', expecting function or task or "SystemVerilog keyword 'pure'".
-# ** Error: ../tb/scoreboard.sv(26): (vlog-2163) Macro `uvm_component_utils is undefined.
-# ** Error: (vlog-13069) ../tb/scoreboard.sv(26): near "(": syntax error, unexpected '(', expecting function or task or "SystemVerilog keyword 'pure'".
-# ** Error (suppressible): ../tb/mac_env.sv(15): (vlog-2744) An import statement is illegal when directly within a class scope.
-# ** Error (suppressible): ../tb/mac_env.sv(16): (vlog-2744) An import statement is illegal when directly within a class scope.
-# ** Error: ../tb/mac_env.sv(16): (vlog-13006) Could not find the package (mac_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-# ** Error: ../tb/mac_env.sv(40):  Failed to find the name 'type_id' in scope 'scoreboard' at ../tb/scoreboard.sv(10).
-# ** Error: (vlog-13069) ../tb/seq_of_commands.sv(7): near "s": syntax error, unexpected IDENTIFIER.
-# ** Error: ../tb/virtual_sequencer.sv(7): (vlog-13205) Syntax error found in the scope following 'v'. Is there a missing '::'?
-# ** Error: (vlog-13069) ../tb/mac_test.sv(21): near "module": syntax error, unexpected module, expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
-# ** Error: ../tb/mac_test.sv(23): Illegal use of 'automatic' for variable declaration (clk_156m25).
-# ** Error: ../tb/mac_test.sv(23): Illegal use of 'automatic' for variable declaration (clk_xgmii_rx).
-# ** Error: ../tb/mac_test.sv(23): Illegal use of 'automatic' for variable declaration (clk_xgmii_tx).
-# ** Error: ../tb/mac_test.sv(23): Illegal use of 'automatic' for variable declaration (wb_clk_i).
-# ** Error: ../tb/mac_test.sv(24): Illegal use of 'automatic' for variable declaration (reset_156m25_n).
-# ** Error: ../tb/mac_test.sv(24): Illegal use of 'automatic' for variable declaration (reset_xgmii_rx_n).
-# ** Error: ../tb/mac_test.sv(24): Illegal use of 'automatic' for variable declaration (reset_xgmii_tx_n).
-# ** Error: ../tb/mac_test.sv(26): Illegal use of 'automatic' for variable declaration (pkt_rx_ren).
-# ** Error: ../tb/mac_test.sv(26): Illegal use of 'automatic' for variable declaration (pkt_tx_eop).
-# ** Error: ../tb/mac_test.sv(26): Illegal use of 'automatic' for variable declaration (pkt_tx_sop).
-# ** Error: ../tb/mac_test.sv(26): Illegal use of 'automatic' for variable declaration (pkt_tx_val).
-# ** Error: ../tb/mac_test.sv(26): Illegal use of 'automatic' for variable declaration (pkt_rx_avail).
-# ** Error: ../tb/mac_test.sv(26): Illegal use of 'automatic' for variable declaration (pkt_rx_eop).
-# ** Error: ../tb/mac_test.sv(26): Illegal use of 'automatic' for variable declaration (pkt_rx_err).
-# ** Error: ../tb/mac_test.sv(26): Illegal use of 'automatic' for variable declaration (pkt_rx_sop).
-# ** Error: ../tb/mac_test.sv(26): Illegal use of 'automatic' for variable declaration (pkt_rx_val).
-# ** Error: ../tb/mac_test.sv(26): Illegal use of 'automatic' for variable declaration (pkt_tx_full).
-# ** Error: ../tb/mac_test.sv(27): Illegal use of 'automatic' for variable declaration (pkt_tx_data).
-# ** Error: ../tb/mac_test.sv(27): Illegal use of 'automatic' for variable declaration (pkt_rx_data).
-# ** Error: ../tb/mac_test.sv(28): Illegal use of 'automatic' for variable declaration (pkt_tx_mod).
-# ** Error: ../tb/mac_test.sv(28): Illegal use of 'automatic' for variable declaration (pkt_rx_mod).
-# ** Error: ../tb/mac_test.sv(30): Illegal use of 'automatic' for variable declaration (wb_cyc_i).
-# ** Error: ../tb/mac_test.sv(30): Illegal use of 'automatic' for variable declaration (wb_stb_i).
-# ** Error: ../tb/mac_test.sv(30): Illegal use of 'automatic' for variable declaration (wb_we_i).
-# ** Error: ../tb/mac_test.sv(30): Illegal use of 'automatic' for variable declaration (wb_ack_o).
-# ** Error: ../tb/mac_test.sv(30): Illegal use of 'automatic' for variable declaration (wb_int_o).
-# ** Error: ../tb/mac_test.sv(31): Illegal use of 'automatic' for variable declaration (wb_dat_i).
-# ** Error: ../tb/mac_test.sv(31): Illegal use of 'automatic' for variable declaration (wb_dat_o).
-# ** Error: ../tb/mac_test.sv(32): Illegal use of 'automatic' for variable declaration (wb_adr_i).
-# ** Error: ../tb/mac_test.sv(34): Illegal use of 'automatic' for variable declaration (xgmii_rxd).
-# ** Error: ../tb/mac_test.sv(34): Illegal use of 'automatic' for variable declaration (xgmii_txd).
-# ** Error: ../tb/mac_test.sv(35): Illegal use of 'automatic' for variable declaration (xgmii_rxc).
-# ** Error: ../tb/mac_test.sv(35): Illegal use of 'automatic' for variable declaration (xgmii_txc).
-# ** Error: (vlog-13069) ../tb/mac_test.sv(37): near "initial": syntax error, unexpected initial, expecting class.
-# ** Error: ../tb/mac_test.sv(53): End of source encountered before `endif directive closing region starting at file '../tb/mac_test.sv' line 18.
-# End time: 20:50:22 on May 08,2019, Elapsed time: 0:00:01
-# Errors: 70, Warnings: 7
-# ** Error: /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/linux_x86_64/vlog failed.
-# Error in macro ./run.do line 9
-# /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/linux_x86_64/vlog failed.
-#     while executing
-# "vlog +cover -sv ../tb/mac_package.sv  ./tb/mac_interface.sv ../tb/rst_seq_item.sv  ../tb/wb_seq_item.sv  ../tb/tx_sequence.sv  ../tb/wb_sequence.sv  ...."
+# ** Warning: ../tb/rx_monitor.sv(66): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+# ** Warning: ../tb/rx_monitor.sv(153): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+# ** Warning: ../tb/tx_monitor.sv(60): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(131): (vlog-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(142): (vlog-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(148): (vlog-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(167): (vlog-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
+# -- Compiling package mac_interface_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling interface mac_interface
+# ** Warning: ../tb/tx_monitor.sv(60): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+# ** Warning: ../tb/rx_monitor.sv(66): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+# ** Warning: ../tb/rx_monitor.sv(153): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+# ** Warning: ../tb/tx_monitor.sv(60): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+# ** Warning: ../tb/rx_monitor.sv(66): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+# ** Warning: ../tb/rx_monitor.sv(153): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(131): (vlog-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(142): (vlog-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(148): (vlog-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(167): (vlog-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
+# -- Compiling package mac_top_sv_unit
+# -- Importing package mac_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module mac_top
+# -- Compiling program mac_tb
+# 
+# Top level modules:
+# 	mac_top
+# 	mac_tb
+# End time: 21:43:37 on May 08,2019, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 17
+# vsim -c mac_top 
+# Start time: 21:43:37 on May 08,2019
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: ../tb/mac_top.sv(48): (vopt-2958) Implicit wire 'wb_rst_i' does not have any driver.
+# ** Warning: ../tb/rx_monitor.sv(66): (vopt-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+# ** Warning: ../tb/rx_monitor.sv(153): (vopt-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+# ** Warning: ../tb/tx_monitor.sv(60): (vopt-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(131): (vopt-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(142): (vopt-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(148): (vopt-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(167): (vopt-2240) Treating stand-alone use of function 'compare_payload' as an implicit VOID cast.
+# ** Warning: ../tb/scoreboard.sv(62): (vopt-2250) Function "write_from_pkt_tx_agent" has no return value assignment.
+# ** Warning: ../tb/scoreboard.sv(68): (vopt-2250) Function "write_from_pkt_rx_agent" has no return value assignment.
+# ** Warning: ../tb/scoreboard.sv(75): (vopt-2250) Function "write_from_wshbn_agent" has no return value assignment.
+# ** Warning: ../tb/scoreboard.sv(184): (vopt-2250) Function "compare_payload" has no return value assignment.
+# //  ModelSim SE-64 10.6 Dec 13 2016Linux 2.6.32-754.9.1.el6.x86_64
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.mac_interface(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.mac_pkg(fast)
+# Loading work.mac_top_sv_unit(fast)
+# Loading work.mac_top(fast)
+# Loading work.mac_interface_sv_unit(fast)
+# Loading work.mac_interface(fast)
+# Loading work.xge_mac(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3764) ../tb/rst_monitor.sv(25): Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /mac_pkg File: ../tb/mac_package.sv
+# ** Warning: (vsim-3764) ../tb/rx_monitor.sv(25): Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /mac_pkg File: ../tb/mac_package.sv
+# ** Warning: (vsim-3764) ../tb/tx_monitor.sv(29): Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /mac_pkg File: ../tb/mac_package.sv
+# ** Warning: (vsim-3764) ../tb/wb_monitor.sv(25): Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /mac_pkg File: ../tb/mac_package.sv
+# ** Warning: (vsim-3764) ../tb/rst_driver.sv(23): Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /mac_pkg::rst_driver File: ../tb/mac_package.sv
+# ** Warning: (vsim-3764) ../tb/tx_driver.sv(21): Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /mac_pkg::tx_driver File: ../tb/mac_package.sv
+# ** Warning: (vsim-3764) ../tb/wb_driver.sv(19): Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /mac_pkg::wb_driver File: ../tb/mac_package.sv
+# ** Warning: (vsim-3764) ../tb/scoreboard.sv(33): Stand-alone call to function 'write_from_pkt_tx_agent' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /mac_pkg::scoreboard::uvm_analysis_imp_from_pkt_tx_agent #(mac_pkg::tx_transaction, mac_pkg::scoreboard) File: ../tb/mac_package.sv
+# ** Warning: (vsim-3764) ../tb/scoreboard.sv(35): Stand-alone call to function 'write_from_pkt_rx_agent' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /mac_pkg::scoreboard::uvm_analysis_imp_from_pkt_rx_agent #(mac_pkg::tx_transaction, mac_pkg::scoreboard) File: ../tb/mac_package.sv
+# ** Warning: (vsim-3764) ../tb/scoreboard.sv(37): Stand-alone call to function 'write_from_wshbn_agent' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /mac_pkg::scoreboard::uvm_analysis_imp_from_wshbn_agent #(mac_pkg::wb_transaction_in, mac_pkg::scoreboard) File: ../tb/mac_package.sv
+# Loading /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ** Warning: (vsim-PLI-3003) ../tb/tx_driver.sv(39): [TOFD] - System task or function '$unrandom_range' is not defined.
+#    Time: 0 ns  Iteration: 0  Region: /mac_pkg::tx_driver::run_phase File: ../tb/mac_package.sv
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# Break key hit
+# Simulation stop requested.
+# Control-C interrupt
+# 
+# MACRO ./run.do PAUSED at line 13
+# End time: 21:46:08 on May 08,2019, Elapsed time: 0:02:31
+# Errors: 0, Warnings: 23

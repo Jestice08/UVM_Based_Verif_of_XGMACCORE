@@ -4,6 +4,11 @@
 `ifndef SCOREBOARD_SV
 `define SCOREBOARD_SV
 
+`include "uvm_macros.svh"
+
+import uvm_pkg::*;
+import mac_pkg::*;
+
 typedef uvm_in_order_comparator #(tx_transaction) packet_comparator;  //Not sure where this is used?
 
 
