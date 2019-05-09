@@ -5,13 +5,17 @@
 `ifndef MAC_TEST_SV
 `define MAC_TEST_SV
 
-`include "rst_sequence.sv"
-`include "wb_sequence.sv"
-`include "tx_sequence.sv"
-`include "mac_env.sv"
-`include "virtual_sequencer.sv"
-`include "seq_of_commands.sv"
+//`include "rst_sequence.sv"
+//`include "wb_sequence.sv"
+//`include "tx_sequence.sv"
+//`include "mac_env.sv"
+//`include "virtual_sequencer.sv"
+//`include "seq_of_commands.sv"
+`include "uvm_macros.svh"
+//`include "mac_top.sv"
 
+import uvm_pkg::*;
+import mac_pkg::*;
 
 class mac_test extends uvm_test;
 	

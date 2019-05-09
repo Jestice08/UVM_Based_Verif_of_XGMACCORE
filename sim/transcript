@@ -1,6 +1,6 @@
 # do run.do
 # Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 20:47:21 on May 08,2019
+# Start time: 20:50:21 on May 08,2019
 # vlog ../dut/verilog/fault_sm.v ../dut/verilog/generic_fifo.v ../dut/verilog/generic_fifo_ctrl.v ../dut/verilog/generic_mem_medium.v ../dut/verilog/generic_mem_small.v ../dut/verilog/meta_sync.v ../dut/verilog/meta_sync_single.v ../dut/verilog/rx_data_fifo.v ../dut/verilog/rx_dequeue.v ../dut/verilog/rx_enqueue.v ../dut/verilog/rx_hold_fifo.v ../dut/verilog/sync_clk_core.v ../dut/verilog/sync_clk_wb.v ../dut/verilog/sync_clk_xgmii_tx.v ../dut/verilog/tx_data_fifo.v ../dut/verilog/tx_dequeue.v ../dut/verilog/tx_enqueue.v ../dut/verilog/tx_hold_fifo.v ../dut/verilog/wishbone_if.v ../dut/verilog/xge_mac.v "+incdir+../dut/include/" 
 # -- Compiling module fault_sm
 # -- Compiling module generic_fifo
@@ -25,10 +25,10 @@
 # 
 # Top level modules:
 # 	xge_mac
-# End time: 20:47:21 on May 08,2019, Elapsed time: 0:00:00
+# End time: 20:50:21 on May 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
-# Start time: 20:47:21 on May 08,2019
+# Start time: 20:50:21 on May 08,2019
 # vlog "+cover" -sv ../tb/mac_package.sv ./tb/mac_interface.sv ../tb/rst_seq_item.sv ../tb/wb_seq_item.sv ../tb/tx_sequence.sv ../tb/wb_sequence.sv ../tb/rst_sequence.sv ../tb/tx_driver.sv ../tb/wb_driver.sv ../tb/rst_driver.sv ../tb/tx_monitor.sv ../tb/rx_monitor.sv ../tb/wb_monitor.sv ../tb/rst_monitor.sv ../tb/tx_agent.sv ../tb/rx_agent.sv ../tb/wb_agent.sv ../tb/rst_agent.sv ../tb/seq_of_commands.sv ../tb/virtual_sequencer.sv ../tb/scoreboard.sv ../tb/mac_env.sv ../tb/mac_test.sv ../tb/mac_top.sv ../tb/mac_tb.sv 
 # -- Compiling package mac_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
@@ -123,7 +123,7 @@
 # ** Error: ../tb/mac_test.sv(35): Illegal use of 'automatic' for variable declaration (xgmii_txc).
 # ** Error: (vlog-13069) ../tb/mac_test.sv(37): near "initial": syntax error, unexpected initial, expecting class.
 # ** Error: ../tb/mac_test.sv(53): End of source encountered before `endif directive closing region starting at file '../tb/mac_test.sv' line 18.
-# End time: 20:47:22 on May 08,2019, Elapsed time: 0:00:01
+# End time: 20:50:22 on May 08,2019, Elapsed time: 0:00:01
 # Errors: 70, Warnings: 7
 # ** Error: /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/linux_x86_64/vlog failed.
 # Error in macro ./run.do line 9
