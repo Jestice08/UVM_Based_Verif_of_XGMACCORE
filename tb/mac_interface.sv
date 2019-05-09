@@ -2,6 +2,10 @@
 `ifndef MAC_INTERFACE__SV
 `define MAC_INTERFACE__SV
 
+import uvm_pkg::*;
+
+`include "uvm_macros.svh"
+
 interface mac_interface(
                         input bit  clk_156m25,
                         input bit  clk_xgmii_rx,

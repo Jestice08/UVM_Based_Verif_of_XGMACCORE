@@ -29,14 +29,14 @@ class mac_test extends uvm_test;
 		
 		
 // ==== Assign virtual interface ================================
-    uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.rst_agent_h.rst_driver_h", "rst_drv_vi_if", xge_test_top.xge_mac_if);
-    uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.wb_agent_h.wb_monitor_h", "wb_mon_vi_if", xge_test_top.xge_mac_if);
-    uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.wb_agent_h.wb_driver_h", "wb_drv_vi_if", xge_test_top.xge_mac_if);
-    uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.tx_agent_h.tx_monitor_h", "mon_vi", xge_test_top.xge_mac_if);
-    uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.tx_agent_h.tx_driver_h", "drv_vi", xge_test_top.xge_mac_if);
-    uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.rx_agent_h.rx_monitor_h", "mon_vi", xge_test_top.xge_mac_if);
-   // uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.xgmii_tx_agt.xgmii_tx_mon", "mon_vi", xge_test_top.xge_mac_if);
-   // uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.xgmii_rx_agt.xgmii_rx_mon", "mon_vi", xge_test_top.xge_mac_if);
+    uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.rst_agent_h.rst_driver_h", "rst_drv_vi_if", mac_top.mac_if);
+    uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.wb_agent_h.wb_monitor_h", "wb_mon_vi_if", mac_top.mac_if);
+    uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.wb_agent_h.wb_driver_h", "wb_drv_vi_if", mac_top.mac_if);
+    uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.tx_agent_h.tx_monitor_h", "mon_vi", mac_top.mac_if);
+    uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.tx_agent_h.tx_driver_h", "drv_vi", mac_top.mac_if);
+    uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.rx_agent_h.rx_monitor_h", "mon_vi", mac_top.mac_if);
+   // uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.xgmii_tx_agt.xgmii_tx_mon", "mon_vi", mac_top.mac_if);
+   // uvm_config_db #(virtual mac_interface)::set(this, "mac_env_h.xgmii_rx_agt.xgmii_rx_mon", "mon_vi", mac_top.mac_if);
     // ==============================================================
 
     // ==== Run the sequence on the sequencer using uvm_config_db ===
@@ -122,9 +122,9 @@ class virtual_sequence_test_base extends mac_test;
 
   virtual function void connect_phase(input uvm_phase phase);
     super.connect_phase(phase);
-    virtual_sequencer_h.seqr_rst     = mac_env_h.rst_agent_h.rst_seqr;
-    virtual_sequencer_h.seqr_wshbn   = mac_env_h.wb_agent_h.wb_sequencer_h;
-    virtual_sequencer_h.tx_sequencer_h  = mac_env_h.tx_agent_h.tx_sequencer_h;
+    virtual_sequencer_h.rst_sequencer_h  = mac_env_h.rst_agent_h.rst_sequencer_h;
+    virtual_sequencer_h.wb_sequencer_h   = mac_env_h.wb_agent_h.wb_sequencer_h;
+    virtual_sequencer_h.tx_sequencer_h   = mac_env_h.tx_agent_h.tx_sequencer_h;
   endfunction : connect_phase
 
 

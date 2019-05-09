@@ -119,7 +119,7 @@ class tx_monitor extends uvm_monitor;
 		if ( pkt_fihished ) begin
           `uvm_info( get_name(), $psprintf("Packet: \n%0s", tx_packet.sprint()), UVM_HIGH)
           if ( tx_packet.set_sop && tx_packet.set_eop ) begin
-            ap_tx_mon.write( tx_packet );
+            tx_mon_aport.write( tx_packet );
             tx_mon_num++;
           end
           pkt_fihished = 0;

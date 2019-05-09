@@ -1,6 +1,10 @@
 `ifndef RX_MONITOR__SV
 `define RX_MONITOR__SV
 
+import uvm_pkg::*;
+
+`include "uvm_macros.svh"
+
 class rx_monitor extends uvm_monitor;
 
 	`uvm_component_utils(rx_monitor)
@@ -156,7 +160,7 @@ class rx_monitor extends uvm_monitor;
             			`uvm_info( get_name(), $psprintf("Packet: \n%0s", rx_packet.sprint()), UVM_HIGH)
             			if( !err_in_packet && rx_packet.set_sop && rx_packet.set_eop)
             			begin
-              				ap_rx_mon.write( rx_packet );
+              				rx_mon_aport.write( rx_packet );
               				rx_mon_num++;
             			end
             			pkt_fihished = 0;
