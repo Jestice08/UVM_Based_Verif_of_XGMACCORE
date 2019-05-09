@@ -4,16 +4,11 @@
 `ifndef MAC_ENV_SV
 `define MAC_ENV_SV
 
-//`include "rst_agent.sv"
-//`include "wb_agent.sv"
-//`include "tx_agent.sv"
-//`include "rx_agent.sv"
-//`include "scoreboard.sv"
-
-`include "uvm_macros.svh"
-
-import uvm_pkg::*;
-import mac_pkg::*;
+`include "rst_agent.sv"
+`include "wb_agent.sv"
+`include "tx_agent.sv"
+`include "rx_agent.sv"
+`include "scoreboard.sv"
 
 
 class mac_env extends uvm_env;
