@@ -1,10 +1,6 @@
 `ifndef RST_DRIVER__SV
 `define RST_DRIVER__SV
 
-`include "uvm_macros.svh"
-
-import uvm_pkg::*;
-import mac_pkg::*;
 
 //`include  "rst_seq_item.sv"
 class rst_driver extends uvm_driver#(rst_transaction_in);

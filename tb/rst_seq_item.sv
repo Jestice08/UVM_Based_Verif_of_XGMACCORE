@@ -3,10 +3,6 @@
 `ifndef RST_SEQ_ITEM__SV
 `define RST_SEQ_ITEM__SV
 
-`include "uvm_macros.svh"
-
-import uvm_pkg::*;
-
 class rst_transaction_in extends uvm_sequence_item;
 
     `uvm_object_utils(rst_transaction_in)

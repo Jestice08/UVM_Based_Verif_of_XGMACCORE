@@ -1,10 +1,6 @@
 `ifndef RX_MONITOR__SV
 `define RX_MONITOR__SV
 
-`include "uvm_macros.svh"
-
-import uvm_pkg::*;
-import mac_pkg::*;
 
 class rx_monitor extends uvm_monitor;
 

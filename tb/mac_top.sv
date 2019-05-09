@@ -2,8 +2,6 @@
 `ifndef MAC_TOP__SV
 `define MAC_TOP__SV
 
-import mac_pkg::*;
-
 module mac_top();
 
 	logic         clk_156m25, clk_xgmii_rx, clk_xgmii_tx, wb_clk_i;

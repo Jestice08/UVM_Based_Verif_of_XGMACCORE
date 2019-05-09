@@ -1,9 +1,7 @@
 `ifndef RST_SEQUENCE__SV
 `define RST_SEQUENCE__SV
 
-`include "uvm_macros.svh"
 `include "rst_seq_item.sv"
-import uvm_pkg::*;
 
 class rst_sequence extends uvm_sequence #(rst_transaction_in);
 
