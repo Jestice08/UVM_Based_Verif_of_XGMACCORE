@@ -1,12 +1,6 @@
 `ifndef VIRTUAL_SEQUENCER__SV
 `define VIRTUAL_SEQUENCER__SV
 
-
-`include "uvm_macros.svh"
-
-import uvm_pkg::*;
-import mac_pkg::*;
-
 class virtual_sequencer extends uvm_sequencer;
 
   `uvm_component_utils(virtual_sequencer)

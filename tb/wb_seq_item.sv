@@ -2,11 +2,6 @@
 `ifndef WB_SEQ_ITEM__SV
 `define WB_SEQ_ITEM__SV
 
-`include "uvm_macros.svh"
-`include "../dut/include/defines.v"
-//package sequences;
-
-import uvm_pkg::*;
 
 class wb_transaction_in extends uvm_sequence_item;
 

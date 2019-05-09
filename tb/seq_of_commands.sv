@@ -1,9 +1,5 @@
 `ifndef SEQ_OF_COMMANDS__SV
 `define SEQ_OF_COMMANDS__SV
-`include "uvm_macros.svh"
-
-import uvm_pkg::*;
-import mac_pkg::*;
 
 class seq_of_commands extends uvm_sequence;
 

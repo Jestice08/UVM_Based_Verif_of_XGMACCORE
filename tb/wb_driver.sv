@@ -1,7 +1,6 @@
 `ifndef WB_DRIVER__SV
 `define WB_DRIVER__SV
 
-`include "wb_seq_item.sv"
 
 class wb_driver extends uvm_driver #(wb_transaction_in);
 

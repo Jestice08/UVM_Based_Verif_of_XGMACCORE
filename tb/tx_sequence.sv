@@ -3,9 +3,6 @@
 `ifndef TX_SEQUENCE
 `define TX_SEQUENCE
 
-`include "uvm_macros.svh"
-
-import uvm_pkg::*;
 //Sequence item begins here:
 
 class tx_transaction extends uvm_sequence_item;

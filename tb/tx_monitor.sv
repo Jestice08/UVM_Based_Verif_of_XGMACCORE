@@ -3,11 +3,6 @@
 `ifndef  TX_MONITOR_SV
 `define  TX_MONITOR_SV
 
-`include "uvm_macros.svh"
-
-import uvm_pkg::*;
-import mac_pkg::*;
-
 
 class tx_monitor extends uvm_monitor;
 
