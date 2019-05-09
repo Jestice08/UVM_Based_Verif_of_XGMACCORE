@@ -1,0 +1,35 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "uvm_pkg": {},
+        "vcs_paramclassrepository": {},
+        "sync_clk_wb": {},
+        "_vcs_unit__2356082715": {},
+        "_vcs_msglog": {},
+        "tx_data_fifo": {},
+        "uvm_custom_install_recording": {},
+        "fault_sm": {},
+        "generic_fifo_ctrl_0000": {},
+        "sync_clk_xgmii_tx": {},
+        "meta_sync_single_0000": {},
+        "meta_sync_single_0001": {},
+        "tx_hold_fifo": {},
+        "xge_mac": {},
+        "wishbone_if": {},
+        "mac_interface": {},
+        "mac_tb": {},
+        "mac_top": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "checksum": 4294967295,
+            "out": "objs/amcQw_d.o",
+            "mod": "...MASTER...",
+            "bytes": 8391,
+            "mode": 4
+        }
+    },
+    "reusePaths": {},
+    "ObjArchives": []
+}

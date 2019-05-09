@@ -14,10 +14,12 @@ class rst_sequence extends uvm_sequence #(rst_transaction_in);
 
   	virtual task body();
   	begin
-    	//Reset stage
+    	`uvm_info( "myid", "test", UVM_HIGH)
+		//Reset stage
     	`uvm_do_with(req, { rst_156m25_n == 1'b0; rst_xgmii_rx_n == 1'b0; rst_xgmii_tx_n == 1'b0; wb_rst == 1'b1;} );
     	//End reset
     	`uvm_do_with(req, { rst_156m25_n == 1'b1; rst_xgmii_rx_n == 1'b1; rst_xgmii_tx_n == 1'b1; wb_rst == 1'b0;} );
+		`uvm_info( "myid", "test", UVM_HIGH)
   	end
   	endtask : body
 

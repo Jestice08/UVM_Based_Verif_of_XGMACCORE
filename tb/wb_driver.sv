@@ -39,8 +39,8 @@ class wb_driver extends uvm_driver #(wb_transaction_in);
   					wb_drv_vi_if.drv_cb.wb_stb_i <= req.wb_stb;
   					wb_drv_vi_if.drv_cb.wb_cyc_i <= req.wb_cyc;
   					wb_drv_vi_if.drv_cb.wb_we_i <= req.wb_we;
-  					wb_drv_vi_if.drv_cb.wb_data_i <= req.wb_data;
-  					wb_drv_vi_if.drv_cb.wb_addr_i <= req.wb_addr;
+  					wb_drv_vi_if.drv_cb.wb_dat_i <= req.wb_data;
+  					wb_drv_vi_if.drv_cb.wb_adr_i <= req.wb_addr;
   				//hold the transmission
   				repeat(5) @(wb_drv_vi_if.drv_cb);
   				//stop the transmission

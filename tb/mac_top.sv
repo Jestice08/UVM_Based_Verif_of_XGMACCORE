@@ -11,7 +11,7 @@ module mac_top();
 	logic [63:0]  pkt_tx_data, pkt_rx_data;
 	logic [2:0]   pkt_tx_mod, pkt_rx_mod;
 	//Wishbone
-	logic wb_cyc_i, wb_stb_i, wb_we_i, wb_ack_o, wb_int_o;
+	logic wb_cyc_i, wb_stb_i, wb_we_i, wb_ack_o, wb_int_o, wb_rst_i;
 	logic [31:0]  wb_dat_i, wb_dat_o;
 	logic [7:0]   wb_adr_i;
 	//XGMII

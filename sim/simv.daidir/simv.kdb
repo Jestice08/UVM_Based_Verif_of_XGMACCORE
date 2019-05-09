@@ -1,0 +1,9 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/misc/scratch/xteng/verif_project/UVM_Based_Verif_of_XGMACCORE/sim
+SystemC=FALSE
+UUM=FALSE
+KDB=FALSE
+USE_NOVAS_HOME=FALSE
+TOP=uvm_custom_install_recording mac_tb mac_top 

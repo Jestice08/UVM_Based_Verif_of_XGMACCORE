@@ -17,9 +17,9 @@ class seq_of_commands extends uvm_sequence;
   	endfunction : new
 
   	virtual task body();
-    	`uvm_do_on( tx_sequence_h, p_sequencer.tx_sequencer_h );
+    	`uvm_do_on( tx_sequence_h, p_sequencer.tx_sequencer_vi );
     	#100;
-    	`uvm_do_on( wb_sequence_finish_h, p_sequencer.wb_sequencer_h );
+    	`uvm_do_on( wb_sequence_finish_h, p_sequencer.wb_sequencer_vi );
  	 endtask : body
 
   	virtual task pre_start();

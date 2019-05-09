@@ -23,7 +23,7 @@ class wb_agent extends uvm_agent;
         aport=new("aport",this);
         wb_sequencer_h = wb_sequencer::type_id::create("wb_sequencer_h",this);
         wb_driver_h = wb_driver::type_id::create("wb_driver_h",this);
-        wb_monitor_h = wb_monitor::type_id::create("wb_sequencer_h",this);
+        wb_monitor_h = wb_monitor::type_id::create("wb_monitor_h",this);
     endfunction: build_phase 
 
     virtual function void connect_phase( input uvm_phase phase );

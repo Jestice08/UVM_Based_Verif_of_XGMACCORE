@@ -35,7 +35,7 @@ class tx_driver extends uvm_driver #(tx_transaction);  //consume the transaction
 		begin
 		@ (drv_vi.drv_cb)
 		drv_vi.drv_cb.pkt_tx_val  <= 1'b0;
-		drv_vi.drv_cb.pkt_tx_sop  <= $unrandom_range(1,0);
+		drv_vi.drv_cb.pkt_tx_sop  <= $urandom_range(1,0);
 		drv_vi.drv_cb.pkt_tx_eop  <= $urandom_range(1,0);
         drv_vi.drv_cb.pkt_tx_mod  <= $urandom_range(7,0);
         drv_vi.drv_cb.pkt_tx_data <= { $urandom, $urandom_range(65535,0) }; //Why 48-bits?

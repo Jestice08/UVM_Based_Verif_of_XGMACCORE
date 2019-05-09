@@ -31,6 +31,7 @@ parameter OUTPUT_SKEW = 1;//output is synchronized and sent after the clocking e
 clocking drv_cb @(posedge clk_156m25);
     default input   #INPUT_SKEW;
     default output  #OUTPUT_SKEW;
+	input   pkt_tx_full;
     output  pkt_rx_ren;
     output  pkt_tx_data;
     output  pkt_tx_eop;
@@ -44,6 +45,10 @@ clocking drv_cb @(posedge clk_156m25);
     output  wb_we_i;
     output  xgmii_rxc;
     output  xgmii_rxd;
+	output	reset_156m25_n;
+	output	reset_xgmii_rx_n;
+	output	reset_xgmii_tx_n;
+	output	wb_rst_i;
 endclocking // drv_cb
 modport driver_port( clocking drv_cb );
 
@@ -76,6 +81,10 @@ clocking mon_cb @(posedge clk_156m25);
     input   wb_we_i;
     input   xgmii_rxc;
     input   xgmii_rxd;
+	input	reset_156m25_n;
+	input	reset_xgmii_rx_n;
+	input	reset_xgmii_tx_n;
+	input	wb_rst_i;
 endclocking //mon_cb
 modport monitor_port( clocking mon_cb );
 

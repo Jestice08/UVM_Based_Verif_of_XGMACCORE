@@ -1,0 +1,378 @@
+{
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_utime_sec": 7.451867,
+            "ru_stime_sec": 0.151976,
+            "ru_maxrss_kb": 131208,
+            "ru_minflt": 31313,
+            "ru_majflt": 0,
+            "ru_nvcsw": 1134,
+            "ru_nivcsw": 1448
+        },
+        "ru_childs_cgstart": {
+            "ru_utime_sec": 0.0,
+            "ru_stime_sec": 0.0,
+            "ru_maxrss_kb": 0,
+            "ru_minflt": 0,
+            "ru_majflt": 0,
+            "ru_nvcsw": 0,
+            "ru_nivcsw": 0
+        },
+        "nMops": 0,
+        "nQuads": 0,
+        "quadSpeed": 0.0,
+        "totalObjSize": 352808,
+        "ru_self_end": {
+            "ru_utime_sec": 7.4728630000000003,
+            "ru_stime_sec": 0.16397500000000001,
+            "ru_maxrss_kb": 131208,
+            "ru_minflt": 32071,
+            "ru_majflt": 0,
+            "ru_nvcsw": 1242,
+            "ru_nivcsw": 1515
+        },
+        "mopSpeed": 0.0,
+        "ru_childs_end": {
+            "ru_utime_sec": 0.0,
+            "ru_stime_sec": 0.0,
+            "ru_maxrss_kb": 0,
+            "ru_minflt": 0,
+            "ru_majflt": 0,
+            "ru_nvcsw": 0,
+            "ru_nivcsw": 0
+        },
+        "mop/quad": 0.0,
+        "Frontend(%)": 99.719036733310901,
+        "CodeGen(%)": 0.28096326668908872
+    },
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "sync_clk_xgmii_tx": {
+            "rpjqj_d": {
+                "bytes": 10748,
+                "out": "rpjqj_d.o",
+                "checksum": 4294967295,
+                "mod": "sync_clk_xgmii_tx",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "generic_fifo_ctrl_0000": {
+            "NY7Gb_d": {
+                "bytes": 24290,
+                "out": "NY7Gb_d.o",
+                "checksum": 4294967295,
+                "mod": "generic_fifo_ctrl_0000",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "sync_clk_wb": {
+            "UjwLm_d": {
+                "bytes": 16602,
+                "out": "UjwLm_d.o",
+                "checksum": 4294967295,
+                "mod": "sync_clk_wb",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "vcs_paramclassrepository": {
+            "hEeZs_d": {
+                "bytes": 3661610,
+                "out": "hEeZs_d.o",
+                "checksum": 4294967295,
+                "mod": "vcs_paramclassrepository",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "uvm_pkg": {
+            "zr7M1_d": {
+                "bytes": 3487555,
+                "out": "zr7M1_d.o",
+                "checksum": 4294967295,
+                "mod": "uvm_pkg",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "mac_tb": {
+            "nVJPz_d": {
+                "bytes": 2623142,
+                "checksum": 4294967295,
+                "out": "nVJPz_d.o",
+                "mod": "mac_tb",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "mac_interface": {
+            "IMLpM_d": {
+                "bytes": 145880,
+                "out": "IMLpM_d.o",
+                "checksum": 4294967295,
+                "mod": "mac_interface",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 8391,
+                "checksum": 4294967295,
+                "out": "objs/amcQw_d.o",
+                "mod": "...MASTER...",
+                "mode": 4
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "bytes": 30394,
+                "out": "reYIK_d.o",
+                "checksum": 4294967295,
+                "mod": "std",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "mac_top": {
+            "uwAjp_d": {
+                "bytes": 21508,
+                "out": "uwAjp_d.o",
+                "checksum": 4294967295,
+                "mod": "mac_top",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "uvm_custom_install_recording": {
+            "nhiwz_d": {
+                "bytes": 22886,
+                "out": "nhiwz_d.o",
+                "checksum": 4294967295,
+                "mod": "uvm_custom_install_recording",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "tx_hold_fifo": {
+            "GJcQF_d": {
+                "bytes": 27955,
+                "out": "GJcQF_d.o",
+                "checksum": 4294967295,
+                "mod": "tx_hold_fifo",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "_vcs_msglog": {
+            "zQBzV_d": {
+                "bytes": 9878,
+                "out": "zQBzV_d.o",
+                "checksum": 4294967295,
+                "mod": "_vcs_msglog",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "tx_data_fifo": {
+            "srKWe_d": {
+                "bytes": 16719,
+                "out": "srKWe_d.o",
+                "checksum": 4294967295,
+                "mod": "tx_data_fifo",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "xge_mac": {
+            "ymzz2_d": {
+                "bytes": 237432,
+                "out": "ymzz2_d.o",
+                "checksum": 4294967295,
+                "mod": "xge_mac",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "wishbone_if": {
+            "s4ZT9_d": {
+                "bytes": 19533,
+                "out": "s4ZT9_d.o",
+                "checksum": 4294967295,
+                "mod": "wishbone_if",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "_vcs_unit__2356082715": {
+            "B0P0m_d": {
+                "bytes": 150850,
+                "out": "B0P0m_d.o",
+                "checksum": 4294967295,
+                "mod": "_vcs_unit__2356082715",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "meta_sync_single_0000": {
+            "Z0GYV_d": {
+                "bytes": 10302,
+                "out": "Z0GYV_d.o",
+                "checksum": 4294967295,
+                "mod": "meta_sync_single_0000",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "meta_sync_single_0001": {
+            "hgiba_d": {
+                "bytes": 9324,
+                "out": "hgiba_d.o",
+                "checksum": 4294967295,
+                "mod": "meta_sync_single_0001",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        },
+        "fault_sm": {
+            "zk6Si_d": {
+                "bytes": 18594,
+                "out": "zk6Si_d.o",
+                "checksum": 4294967295,
+                "mod": "fault_sm",
+                "mode": 4,
+                "archive": "archive.7/_prev_archive_1.a"
+            }
+        }
+    },
+    "NameTable": {
+        "uvm_pkg": [
+            "uvm_pkg",
+            "zr7M1",
+            "module"
+        ],
+        "vcs_paramclassrepository": [
+            "vcs_paramclassrepository",
+            "hEeZs",
+            "module"
+        ],
+        "sync_clk_wb": [
+            "sync_clk_wb",
+            "UjwLm",
+            "module"
+        ],
+        "_vcs_unit__2356082715": [
+            "_vcs_unit__2356082715",
+            "B0P0m",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "_vcs_msglog": [
+            "_vcs_msglog",
+            "zQBzV",
+            "module"
+        ],
+        "tx_data_fifo": [
+            "tx_data_fifo",
+            "srKWe",
+            "module"
+        ],
+        "uvm_custom_install_recording": [
+            "uvm_custom_install_recording",
+            "nhiwz",
+            "module"
+        ],
+        "fault_sm": [
+            "fault_sm",
+            "zk6Si",
+            "module"
+        ],
+        "generic_fifo_ctrl_0000": [
+            "generic_fifo_ctrl_0000",
+            "NY7Gb",
+            "module"
+        ],
+        "sync_clk_xgmii_tx": [
+            "sync_clk_xgmii_tx",
+            "rpjqj",
+            "module"
+        ],
+        "meta_sync_single_0000": [
+            "meta_sync_single_0000",
+            "Z0GYV",
+            "module"
+        ],
+        "meta_sync_single_0001": [
+            "meta_sync_single_0001",
+            "hgiba",
+            "module"
+        ],
+        "tx_hold_fifo": [
+            "tx_hold_fifo",
+            "GJcQF",
+            "module"
+        ],
+        "wishbone_if": [
+            "wishbone_if",
+            "s4ZT9",
+            "module"
+        ],
+        "xge_mac": [
+            "xge_mac",
+            "ymzz2",
+            "module"
+        ],
+        "mac_interface": [
+            "mac_interface",
+            "IMLpM",
+            "module"
+        ],
+        "mac_tb": [
+            "mac_tb",
+            "nVJPz",
+            "module"
+        ],
+        "mac_top": [
+            "mac_top",
+            "uwAjp",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "PEModules": [],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 344417
+    },
+    "CurCompileModules": [
+        "...MASTER..."
+    ],
+    "Misc": {
+        "cwd": "/misc/scratch/xteng/verif_project/UVM_Based_Verif_of_XGMACCORE/sim",
+        "archive_dir": "archive.7",
+        "csrc": "csrc",
+        "csrc_abs": "/misc/scratch/xteng/verif_project/UVM_Based_Verif_of_XGMACCORE/sim/csrc",
+        "daidir": "simv.daidir",
+        "daidir_abs": "/misc/scratch/xteng/verif_project/UVM_Based_Verif_of_XGMACCORE/sim/simv.daidir",
+        "default_output_dir": "csrc"
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileProcesses": [
+        "cgproc.17963.json"
+    ],
+    "CompileStatus": "Successful"
+}
