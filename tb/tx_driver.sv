@@ -3,7 +3,6 @@
 `ifndef TX_DRIVER_SV
 `define TX_DRIVER_SV
 
-`include "tx_sequence.sv"
 
 class tx_driver extends uvm_driver #(tx_transaction);  //consume the transaction
 
