@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/misc/scratch/xteng/verif_project/UVM_Based_Verif_of_XGMACCORE/sim
 vfault_sm
-Z1 !s110 1557364243
+Z1 !s110 1557366441
 !i10b 1
 !s100 NP=aH`6jLC5PA_j3?bQzZ0
 Il:]S`W;=^UJJ5hQN0=7F^2
@@ -23,7 +23,7 @@ Z5 OL;L;10.6;65
 r1
 !s85 0
 31
-Z6 !s108 1557364243.000000
+Z6 !s108 1557366441.000000
 Z7 !s107 ../dut/include//utils.v|../dut/include//CRC32_D8.v|../dut/include//CRC32_D64.v|../dut/include//defines.v|../dut/verilog/xge_mac.v|../dut/verilog/wishbone_if.v|../dut/verilog/tx_hold_fifo.v|../dut/verilog/tx_enqueue.v|../dut/verilog/tx_dequeue.v|../dut/verilog/tx_data_fifo.v|../dut/verilog/sync_clk_xgmii_tx.v|../dut/verilog/sync_clk_wb.v|../dut/verilog/sync_clk_core.v|../dut/verilog/rx_hold_fifo.v|../dut/verilog/rx_enqueue.v|../dut/verilog/rx_dequeue.v|../dut/verilog/rx_data_fifo.v|../dut/verilog/meta_sync_single.v|../dut/verilog/meta_sync.v|../dut/verilog/generic_mem_small.v|../dut/verilog/generic_mem_medium.v|../dut/verilog/generic_fifo_ctrl.v|../dut/verilog/generic_fifo.v|../dut/verilog/fault_sm.v|
 Z8 !s90 ../dut/verilog/fault_sm.v|../dut/verilog/generic_fifo.v|../dut/verilog/generic_fifo_ctrl.v|../dut/verilog/generic_mem_medium.v|../dut/verilog/generic_mem_small.v|../dut/verilog/meta_sync.v|../dut/verilog/meta_sync_single.v|../dut/verilog/rx_data_fifo.v|../dut/verilog/rx_dequeue.v|../dut/verilog/rx_enqueue.v|../dut/verilog/rx_hold_fifo.v|../dut/verilog/sync_clk_core.v|../dut/verilog/sync_clk_wb.v|../dut/verilog/sync_clk_xgmii_tx.v|../dut/verilog/tx_data_fifo.v|../dut/verilog/tx_dequeue.v|../dut/verilog/tx_enqueue.v|../dut/verilog/tx_hold_fifo.v|../dut/verilog/wishbone_if.v|../dut/verilog/xge_mac.v|+incdir+../dut/include/|
 !i113 0
@@ -117,32 +117,6 @@ R8
 !i113 0
 R9
 R10
-R11
-4mac_tb
-DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-DXx6 mtiUvm 7 uvm_pkg 0 22 oMKUklN?>LE6@MJe7=2><1
-R1
-!i10b 1
-!s100 Ee9=nF@_9KalVY>MAZ;hm2
-I44X[e=ohN__8N>7=bB<@L0
-R2
-!s105 mac_env_sv_unit
-S1
-R0
-w1557343187
-8../tb/mac_tb.sv
-F../tb/mac_tb.sv
-L0 5
-R5
-r1
-!s85 0
-31
-R6
-!s107 ../dut/include/defines.v|/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|../tb/wb_sequence.sv|../tb/wb_seq_item.sv|../tb/wb_monitor.sv|../tb/wb_driver.sv|../tb/wb_agent.sv|../tb/virtual_sequencer.sv|../tb/tx_sequence.sv|../tb/tx_monitor.sv|../tb/tx_driver.sv|../tb/tx_agent.sv|../tb/seq_of_commands.sv|../tb/scoreboard.sv|../tb/rx_monitor.sv|../tb/rx_agent.sv|../tb/rst_sequence.sv|../tb/rst_seq_item.sv|../tb/rst_monitor.sv|../tb/rst_driver.sv|../tb/rst_agent.sv|../tb/mac_top.sv|../tb/mac_test.sv|../tb/mac_tb.sv|../tb/mac_package.sv|../tb/mac_interface.sv|../tb/mac_env.sv|
-!s90 +cover|-sv|../tb/mac_env.sv|../tb/mac_interface.sv|../tb/mac_package.sv|../tb/mac_tb.sv|../tb/mac_test.sv|../tb/mac_top.sv|../tb/rst_agent.sv|../tb/rst_driver.sv|../tb/rst_monitor.sv|../tb/rst_seq_item.sv|../tb/rst_sequence.sv|../tb/rx_agent.sv|../tb/rx_monitor.sv|../tb/scoreboard.sv|../tb/seq_of_commands.sv|../tb/tx_agent.sv|../tb/tx_driver.sv|../tb/tx_monitor.sv|../tb/tx_sequence.sv|../tb/virtual_sequencer.sv|../tb/wb_agent.sv|../tb/wb_driver.sv|../tb/wb_monitor.sv|../tb/wb_seq_item.sv|../tb/wb_sequence.sv|
-!i113 0
-!s102 +cover
-o+cover -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R11
 vmeta_sync
 R1
