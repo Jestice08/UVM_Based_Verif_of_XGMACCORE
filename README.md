@@ -3,7 +3,8 @@
 * Note: The Bug we found in small-size packet test is fixed now. If you want to inject it, go to dut/verilog/tx_dequeue.sv : 733, uncomment it.
 
 1. Select a test you want to run:
-   Go to tb/mac_test_top.sv : 109, uncomment one of the test. You can choose the basic test, small-size packet test and big-size test.
+
+Go to tb/mac_test_top.sv : 109, uncomment one of the test. You can choose the basic test, small-size packet test and big-size test.
    
 2. Run the UVM test:
    Our testbench can be ran in both Synopsys VCS and Mentor Graphics Modelsim.
