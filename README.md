@@ -6,7 +6,7 @@
 
    Go to tb/mac_test_top.sv : 109, uncomment one of the test. You can choose the basic test, small-size packet test and big-size test.
    
-**2. Run the UVM test:
+**2. Run the UVM test:**
 
    Our testbench can be ran in both Synopsys VCS and Mentor Graphics Modelsim.
    
@@ -28,6 +28,6 @@
     
     `make modelsim`  (if you want to open the gui for debug, choose make gui instead)
                                    
-**3. To clean all the simulation files:
+**3. To clean all the simulation files:**
     
     `make clean`
