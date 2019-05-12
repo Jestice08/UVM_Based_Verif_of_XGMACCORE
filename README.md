@@ -4,15 +4,17 @@
 
 1. Select a test you want to run:
 
-Go to tb/mac_test_top.sv : 109, uncomment one of the test. You can choose the basic test, small-size packet test and big-size test.
+   Go to tb/mac_test_top.sv : 109, uncomment one of the test. You can choose the basic test, small-size packet test and big-size test.
    
 2. Run the UVM test:
+
    Our testbench can be ran in both Synopsys VCS and Mentor Graphics Modelsim.
-       a. To launch Synopsys VCS: 
+   
+   a. To launch Synopsys VCS: 
+     
+   `module load syn/vcs`
        
-       `module load syn/vcs`
-       
-       `cd sim`
+   `cd sim`
                                    make vcs
                                    ./simv (if you want to look at the waveforms and debug)
        
