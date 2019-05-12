@@ -1,0 +1,25 @@
+//*********************************************
+//          UVM Based Verification of         *
+//           10 Gb Ethernet MAC Core          *
+//                                            *
+// Team member: Xuezhi Teng (xt2276)          *
+//              Yi Zheng    (yz24299)         *
+//*********************************************
+
+`ifndef TESTCASE__SV
+`define TESTCASE__SV
+
+program testcase();
+
+  import uvm_pkg::*;
+
+  `include "testclass.sv"
+  //`include "test_lib.svh"
+
+  initial begin
+    uvm_top.run_test("basic_test");
+  end
+
+endprogram : testcase
+
+`endif  // TESTCASE__SV
