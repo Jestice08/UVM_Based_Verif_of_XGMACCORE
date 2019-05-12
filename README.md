@@ -10,7 +10,7 @@
 
    Our testbench can be ran in both Synopsys VCS and Mentor Graphics Modelsim.
    
-     a. To launch Synopsys VCS: 
+   a. To launch Synopsys VCS: 
      
      `module load syn/vcs`
        
@@ -20,7 +20,7 @@
    
      `./simv`  (if you want to look at the waveforms and debug)
    
-     b. To launch Mentor Graphics Modelsim:
+   b. To launch Mentor Graphics Modelsim:
     
      `module load mentor/modelsim/2016`
     
