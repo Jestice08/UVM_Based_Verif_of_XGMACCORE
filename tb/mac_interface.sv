@@ -123,7 +123,8 @@ modport dut_port  (
                         input   xgmii_rxc,
                         input   xgmii_rxd
                     );
-
+	
+//Loopback XGMII interface transmission and reception
 initial begin
     assign  xgmii_rxc = xgmii_txc;
     assign  xgmii_rxd = xgmii_txd;
