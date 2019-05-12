@@ -15,13 +15,19 @@
    `module load syn/vcs`
        
    `cd sim`
-                                   make vcs
-                                   ./simv (if you want to look at the waveforms and debug)
+   
+   `make vcs`
+   
+   `./simv`  (if you want to look at the waveforms and debug)
        
-       b. To launch Mentor Graphics Modelsim:
-                                   module load mentor/modelsim/2016
-                                   cd sim
-                                   make modelsim (if you want to open the gui for debug, choose make gui instead)
+    b. To launch Mentor Graphics Modelsim:
+    
+    `module load mentor/modelsim/2016`
+    
+    `cd sim`
+    
+    `make modelsim`  (if you want to open the gui for debug, choose make gui instead)
                                    
 3. To clean all the simulation files:
-                                   make clean
+    
+    `make clean`
