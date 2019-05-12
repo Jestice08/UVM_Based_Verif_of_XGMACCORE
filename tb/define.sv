@@ -7,7 +7,7 @@
 //*********************************************
 
 
-// This is define file. It is used for defining some constants.
+// This is define file. It is used for defining the address of CPU registers.
 
 `define CPUREG_CONFIG0      8'h00
 `define CPUREG_INT_PENDING  8'h08
