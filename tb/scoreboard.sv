@@ -189,11 +189,9 @@ class scoreboard extends uvm_scoreboard;
       error = 0;
       xtxn = wshbn_read_q.pop_front( );
       if (xtxn.wb_we == 1'b1) begin
-	  //( xtxn.wb_we==wb_seq_item::WRITE ) begin
         `uvm_info( get_name(), $psprintf( "WISHBONE WR XTXN - No checking done" ), UVM_HIGH )
       end
       else if (xtxn.wb_we == 1'b0) begin
-	  //( xtxn.wb_we==wb_seq_item::READ ) begin
         if ( (xtxn.wb_addr!=8'h08 && xtxn.wb_addr!=8'h0C) ) begin
           `uvm_info( get_name(), $psprintf( "WISHBONE RD XTXN - No checking done" ), UVM_HIGH )
         end
