@@ -1,3 +1,10 @@
+//*********************************************
+//          UVM Based Verification of         *
+//           10 Gb Ethernet MAC Core          *
+//                                            *
+// Team member: Xuezhi Teng (xt2276)          *
+//              Yi Zheng    (yz24299)         *
+//*********************************************
 
 `ifndef MAC_INTERFACE__SV
 `define MAC_INTERFACE__SV

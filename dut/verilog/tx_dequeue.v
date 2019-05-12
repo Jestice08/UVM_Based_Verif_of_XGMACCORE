@@ -749,6 +749,26 @@ always @(/*AS*/byte_cnt or curr_state_pad or txdfifo_rdata
                       next_txhfifo_wstatus = `TXSTATUS_NONE;
                       txdfifo_ren = 1'b0;
                       next_state_pad = SM_PAD_PAD;
+		
+		      //FIX BUG HERE
+		      //pad with 0 when the eop is valid, can't wait until the
+		      //nxet cycle 
+                      if (txdfifo_rstatus[2:0] == 3'd1)
+                        next_txhfifo_wdata[63:8] = 24'b0;
+                      if (txdfifo_rstatus[2:0] == 3'd2)
+                        next_txhfifo_wdata[63:16] = 16'b0;
+                      if (txdfifo_rstatus[2:0] == 3'd3)
+                        next_txhfifo_wdata[63:24] = 8'b0;
+                      if (txdfifo_rstatus[2:0] == 3'd4)
+                        next_txhfifo_wdata[63:32] = 24'b0;
+                      if (txdfifo_rstatus[2:0] == 3'd5)
+                        next_txhfifo_wdata[63:40] = 16'b0;
+                      if (txdfifo_rstatus[2:0] == 3'd6)
+                        next_txhfifo_wdata[63:48] = 8'b0;
+                      if (txdfifo_rstatus[2:0] == 3'd7)
+                        next_txhfifo_wdata[63:56] = 8'b0;
+		      //END
+		      
 
                   end
                   else if (byte_cnt == 14'd56 &&

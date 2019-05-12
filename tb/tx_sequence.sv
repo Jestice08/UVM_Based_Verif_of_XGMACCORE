@@ -1,9 +1,16 @@
-//This is tx_sequence
-//Designed by 
-`ifndef TX_SEQUENCE
-`define TX_SEQUENCE
+//*********************************************
+//          UVM Based Verification of         *
+//           10 Gb Ethernet MAC Core          *
+//                                            *
+// Team member: Xuezhi Teng (xt2276)          *
+//              Yi Zheng    (yz24299)         *
+//*********************************************
 
-//Sequence item begins here:
+//This is tx_sequence file. It contains tx_transaction, which is sequence item and tx sequence.
+
+`include "uvm_macros.svh"
+package pkt_seq_pkg;
+import uvm_pkg::*;
 
 class tx_transaction extends uvm_sequence_item;
 	
@@ -48,16 +55,16 @@ class tx_transaction extends uvm_sequence_item;
 endclass : tx_transaction
 
 
-//basic transaction
+//basic transaction: make sure everything is correct
 class tx_transaction_basic extends tx_transaction;
 
   `uvm_object_utils( tx_transaction_basic )
 
   constraint C_bringup 
     {
-      dst_addr      == 48'hAABB_CCDD_EEFF;
-      src_addr      == 48'h1122_3344_5566;
-      ethernet_type        dist { 16'h0800:=34, 16'h0806:=33, 16'h88DD:=33 };  // IPv4, ARP, IPv6
+      dst_addr      == 48'hAAAA_AAAA_AAAA;
+      src_addr      == 48'h5555_5555_5555;
+      ethernet_type     dist { 16'h0800:=34, 16'h0806:=33, 16'h88DD:=33 };  // IPv4, ARP, IPv6
       payload.size()    inside {[45:54]};
       foreach( payload[j] )
         {
@@ -73,8 +80,41 @@ class tx_transaction_basic extends tx_transaction;
 endclass : tx_transaction_basic
 
 
-//Sequence starts here:
+//The payload size is very big:
+class tx_transaction_bigsize extends tx_transaction;
 
+  `uvm_object_utils( tx_transaction_bigsize )
+
+  constraint payload_size
+    {
+      payload.size() inside {[1501:9000]};
+    }
+
+  function new(input string name="tx_transaction_bigsize");
+    super.new(name);
+  endfunction : new
+
+endclass : tx_transaction_bigsize
+
+
+//The payload size is very small:
+class tx_transaction_smallsize extends tx_transaction;
+
+  `uvm_object_utils( tx_transaction_smallsize )
+
+  constraint payload_size
+    {
+      payload.size() inside {[1:45]};
+    }
+
+  function new(input string name="tx_transaction_smallsize");
+    super.new(name);
+  endfunction : new
+
+endclass : tx_transaction_smallsize
+
+
+//TX SEQUENCE starts here:
 class tx_sequence extends uvm_sequence # (tx_transaction);
 		
 	`uvm_object_utils(tx_sequence)
@@ -84,7 +124,7 @@ class tx_sequence extends uvm_sequence # (tx_transaction);
 	endfunction : new
 	
 	virtual task body ();
-		repeat (100)
+		repeat (100)     //Here, we are sending 100 packet, for example
 		begin
 		`uvm_do(req);
 		end
@@ -102,24 +142,4 @@ class tx_sequence extends uvm_sequence # (tx_transaction);
 	
 endclass : tx_sequence
 
-`endif  //TX_SEQUENCE
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
+endpackage : pkt_seq_pkg

@@ -1,104 +1,108 @@
-`ifndef WB_SEQUENCE__SV
-`define WB_SEQUENCE__SV
+//*********************************************
+//          UVM Based Verification of         *
+//           10 Gb Ethernet MAC Core          *
+//                                            *
+// Team member: Xuezhi Teng (xt2276)          *
+//              Yi Zheng    (yz24299)         *
+//*********************************************
 
-`include "wb_seq_item.sv"
+//This is wishbone sequence file. It is used for generating wishbone sequence item and wishbone sequence.
+`include "define.sv"
+`include "uvm_macros.svh"
+package wb_seq_pkg;
+import uvm_pkg::*;
 
-class wb_sequence_config extends uvm_sequence #(wb_transaction_in);
 
-	`uvm_object_utils(wb_sequence_config)
+//***************Part 1: Wishbone sequence item*****************
+class wb_seq_item extends uvm_sequence_item;
 
-	function new(input string name="wb_sequence_config");
-		super.new(name);
-    	`uvm_info( get_name(), $sformatf("Hierarchy: %m"), UVM_HIGH )
-  	endfunction : new
+  `uvm_object_utils(wb_seq_item);
 
-  	virtual task body();
-  	begin
-  		// wb_transaction_in tx;
-  		// tx=wb_transaction_in::type_id::create("tx");
-  		// start_item(tx);
-  		// assert(tx.randomize() with {(tx.wb_we == 1'b1) && (tx.wb_addr == 8'h00) && (tx.wb_data == 32'h00000001)} );
-  		// finish_item(tx);
+	rand bit [7:0] wb_addr;
+	rand bit [31:0] wb_data;
+	rand bit wb_cyc, wb_stb, wb_we;
+	
+	
+  constraint wb_addr_cstnt {
+    wb_addr == `CPUREG_CONFIG0 ||   // Configuration register 0   : Address 0x00
+    wb_addr == `CPUREG_INT_PENDING ||   // Interrupt Pending Register : Address 0x08
+    wb_addr == `CPUREG_INT_STATUS ||   // Interrupt Status Register  : Address 0x0C
+    wb_addr == `CPUREG_INT_MASK;     // Interrupt Mask Register    : Address 0x010
+  }
 
-  		// wb_transaction_in tx2;
-  		// tx2=wb_transaction_in::type_id::create("tx2");
-  		// start_item(tx2);
-  		// assert(tx2.randomize() with {(tx2.wb_we == 1'b1) && (tx2.wb_addr == 8'h10) && (tx2.wb_data == 32'hFFFFFFFF)} );
-  		// finish_item(tx2);
+  function new(input string name="wb_seq_item");
+    super.new();
+  endfunction : new
+  
+  function string convert2string;
+        convert2string={$sformatf("Address = %b, Data = %b, Cyc = %b, Stb = %b, We = %b", wb_addr, wb_data, wb_cyc, wb_stb, wb_we)};
+  endfunction: convert2string
 
-    	//Trigger the transmission of frames
+endclass : wb_seq_item
+//**************************************************************
+
+//****************Part 2: Wishbone Config Sequence**************
+class wb_sequence_config extends uvm_sequence #(wb_seq_item);
+
+  `uvm_object_utils(wb_sequence_config)
+
+  function new(input string name="wb_sequence_config");
+    super.new(name);
+  endfunction : new
+
+  virtual task body();
+		//Trigger the transmission of frames
     	`uvm_do_with(req, { wb_we == 1'b1; wb_addr == 8'h00; wb_data == 32'h00000001; wb_stb == 1'b1; wb_cyc == 1'b1;} );
     	//Enable the interrupt
-    	`uvm_do_with(req, { wb_we == 1'b1; wb_addr == 8'h10; wb_data == 32'hFFFFFFFF; wb_stb == 1'b1; wb_cyc == 1'b1;} );
-  	end
-  	endtask : body
-
-  	virtual task pre_start();
-    	if ( starting_phase != null )
-      		starting_phase.raise_objection( this );
-  	endtask : pre_start
-
-  	virtual task post_start();
-    	if  ( starting_phase != null )
-      		starting_phase.drop_objection( this );
-  	endtask : post_start
-
-endclass: wb_sequence_config
-
-class wb_sequence_finish extends uvm_sequence #(wb_transaction_in);
-
-	`uvm_object_utils(wb_sequence_finish)
-
-	function new(input string name="wb_sequence_finish");
-		super.new(name);
-    	`uvm_info( get_name(), $sformatf("Hierarchy: %m"), UVM_HIGH )
-  	endfunction : new
-
-  	virtual task body();
-  	begin
-  		// wb_transaction_in tx;
-  		// tx=wb_transaction_in::type_id::create("tx");
-  		// start_item(tx);
-  		// assert(tx.randomize() with {(tx.wb_we == 1'b0) && (tx.wb_addr == 8'h00)} );
-  		// finish_item(tx);
-
-  		// wb_transaction_in tx2;
-  		// tx2=wb_transaction_in::type_id::create("tx2");
-  		// start_item(tx2);
-  		// assert(tx2.randomize() with {(tx2.wb_we == 1'b0) && (tx2.wb_addr == 8'h10)} );
-  		// finish_item(tx2);
-
-  		// wb_transaction_in tx3;
-  		// tx3=wb_transaction_in::type_id::create("tx3");
-  		// start_item(tx3);
-  		// assert(tx3.randomize() with {(tx3.wb_we == 1'b0) && (tx3.wb_addr == 8'h0C)} );
-  		// finish_item(tx3);
-
-  		// wb_transaction_in tx4;
-  		// tx4=wb_transaction_in::type_id::create("tx4");
-  		// start_item(tx4);
-  		// assert(tx4.randomize() with {(tx4.wb_we == 1'b0) && (tx4.wb_addr == 8'h10)} );
-  		// finish_item(tx4);
-
-   		//Read the final values from wishbone registers
-   		`uvm_do_with(req, { wb_we == 1'b0; wb_addr == 8'h00; wb_stb == 1'b1; wb_cyc == 1'b1;} );
-    	`uvm_do_with(req, { wb_we == 1'b0; wb_addr == 8'h08; wb_stb == 1'b1; wb_cyc == 1'b1;} );
-    	`uvm_do_with(req, { wb_we == 1'b0; wb_addr == 8'h0C; wb_stb == 1'b1; wb_cyc == 1'b1;} );
-    	`uvm_do_with(req, { wb_we == 1'b0; wb_addr == 8'h10; wb_stb == 1'b1; wb_cyc == 1'b1;} );
-  	end
-  	endtask : body
-
-  	virtual task pre_start();
-    	if ( starting_phase != null )
-      		starting_phase.raise_objection( this );
-  	endtask : pre_start
-
-  	virtual task post_start();
-    	if  ( starting_phase != null )
-      		starting_phase.drop_objection( this );
-  	endtask : post_start
-
-endclass: wb_sequence_finish
+    	`uvm_do_with(req, { wb_we == 1'b1; wb_addr == 8'h10; wb_data == 32'hFFFFFFFF; wb_stb == 1'b1; wb_cyc == 1'b1;} );  
+  endtask : body
 
 
-`endif
+  virtual task pre_start();
+    if ( starting_phase != null )
+      starting_phase.raise_objection( this );
+  endtask : pre_start
+
+
+  virtual task post_start();
+    if  ( starting_phase != null )
+      starting_phase.drop_objection( this );
+  endtask : post_start
+
+endclass : wb_sequence_config
+//**************************************************************
+
+
+//****************Part 3: Wishbone Finish Sequence**************
+class wb_sequence_finish extends uvm_sequence #(wb_seq_item);
+
+  `uvm_object_utils(wb_sequence_finish)
+
+  function new(input string name="wb_sequence_finish");
+    super.new(name);
+  endfunction : new
+
+
+  virtual task body();
+	
+	`uvm_do_with(req, { wb_we == 1'b0; wb_addr == 8'h00; wb_stb == 1'b1; wb_cyc == 1'b1;} );
+    `uvm_do_with(req, { wb_we == 1'b0; wb_addr == 8'h08; wb_stb == 1'b1; wb_cyc == 1'b1;} );
+    `uvm_do_with(req, { wb_we == 1'b0; wb_addr == 8'h0C; wb_stb == 1'b1; wb_cyc == 1'b1;} );
+    `uvm_do_with(req, { wb_we == 1'b0; wb_addr == 8'h10; wb_stb == 1'b1; wb_cyc == 1'b1;} );
+  endtask : body
+
+
+  virtual task pre_start();
+    if ( starting_phase != null )
+      starting_phase.raise_objection( this );
+  endtask : pre_start
+
+
+  virtual task post_start();
+    if  ( starting_phase != null )
+      starting_phase.drop_objection( this );
+  endtask : post_start
+
+endclass : wb_sequence_finish
+
+endpackage : wb_seq_pkg
