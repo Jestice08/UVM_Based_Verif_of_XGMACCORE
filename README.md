@@ -1,6 +1,6 @@
 # UVM Based Verifcication of 10 Gb Ethernet MAC Core
 
-* Note: The Bug we found in small-size packet test is fixed now. If you want to inject it, go to dut/verilog/tx_dequeue.sv : 733, uncomment it.
+### Note: The Bug we found in small-size packet test is fixed now. If you want to inject it, go to dut/verilog/tx_dequeue.sv : 733, uncomment it.
 
 1. Select a test you want to run:
 
