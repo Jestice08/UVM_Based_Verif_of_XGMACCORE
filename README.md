@@ -10,23 +10,23 @@
 
    Our testbench can be ran in both Synopsys VCS and Mentor Graphics Modelsim.
    
-   a. To launch Synopsys VCS: 
+     a. To launch Synopsys VCS: 
      
-   `module load syn/vcs`
+     `module load syn/vcs`
        
-   `cd sim`
+     `cd sim`
    
-   `make vcs`
+     `make vcs`
    
-   `./simv`  (if you want to look at the waveforms and debug)
+     `./simv`  (if you want to look at the waveforms and debug)
    
-   b. To launch Mentor Graphics Modelsim:
+     b. To launch Mentor Graphics Modelsim:
     
-   `module load mentor/modelsim/2016`
+     `module load mentor/modelsim/2016`
     
-   `cd sim`
+     `cd sim`
     
-   `make modelsim`  (if you want to open the gui for debug, choose make gui instead)
+     `make modelsim`  (if you want to open the gui for debug, choose make gui instead)
                                    
 **3. To clean all the simulation files:**
     
